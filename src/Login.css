@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #174e4c;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+
+.loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 520px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgb(8 7 16 / 60%);
+  padding: 50px 35px;
+  box-sizing: border-box;
+}
+.loginform form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  height: 32px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 26px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login input[type="submit"] {
+  height: 32px;
+  width: 100%;
+  background-color: #fff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 26px;
+}
+
+.login input[type="submit"]:hover {
+  background-color: #174e4c;
+}
+
+.login select{
+  height: 32px;
+  width: 100%;
+  padding: 8px;
+  margin-top: 26px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
