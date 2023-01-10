@@ -1,0 +1,25 @@
+#mainhomeimg {
+  min-height: 600px;
+  width: 100vw;
+  background-image: url("https://www.spacenter.co.il/wp-content/uploads/2018/11/Partners-and-Co-%D7%97%D7%9C%D7%9C-%D7%A2%D7%91%D7%95%D7%93%D7%94-%D7%9C%D7%A2%D7%95%D7%A8%D7%9B%D7%99-%D7%93%D7%99%D7%9F-6-480x360.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#flexendhome {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(rgb(43, 42, 42), rgb(251, 247, 247));
+}
+#flexicons {
+  display: flex;
+  align-items: center;
+  width: 50vw;
+}
+#info {
+  width: 50vw;
+}
+.icons {
+  width: 100px;
+  height: 50px;
+  color: rgb(3, 3, 3);
+}
