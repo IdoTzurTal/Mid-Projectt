@@ -15,7 +15,7 @@ function HomePage() {
   return (
     <div>
       <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-        <Tabs centered>
+        <Tabs className="homebnav" centered>
           <NavLink to='/Home' element={<HomePage/>} > <Tab label="cyber pro" /></NavLink>
           <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
           <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>

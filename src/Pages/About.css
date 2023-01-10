@@ -1,8 +1,13 @@
 .aboutnav a {
     text-decoration: none;
+    color: white;
+}
+.aboutnav {
+    background-color: rgb(37, 29, 29);
+    width: 100vw;
 }
 
-.prodetails {
+.container {
     height: 50vh;
     width: 70vw;
     display: flex;
@@ -11,12 +16,13 @@
     margin: 0;
 }
 
-.prodetails>* {
+.container>* {
     width: 20vw;
     z-index: 2;
+    background-size: contain;
 }
 
-#gibson {
+#officeworks {
     font-style: italic;
     font-family: system-ui;
     font-size: larger;
@@ -27,7 +33,7 @@
     left: 28%;
     top: 22%;
     text-align: left;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 5px  black;
 }
 
 #officeimg {
@@ -35,5 +41,5 @@
     width: 100vw;
     position: relative;
     right: 125%;
-    opacity: 60%;
+    opacity: 58%;
 }

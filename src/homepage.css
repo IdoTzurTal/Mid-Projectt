@@ -1,3 +1,12 @@
+.homebnav a {
+  text-decoration: none;
+  color: white;
+}
+.homebnav {
+  background-color: rgb(37, 29, 29);
+  width: 100vw;
+}
+
 #mainhomeimg {
   min-height: 600px;
   width: 100vw;
@@ -5,19 +14,23 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 #flexendhome {
   display: flex;
   justify-content: space-between;
   background: linear-gradient(rgb(43, 42, 42), rgb(251, 247, 247));
 }
+
 #flexicons {
   display: flex;
   align-items: center;
   width: 50vw;
 }
+
 #info {
   width: 50vw;
 }
+
 .icons {
   width: 100px;
   height: 50px;
