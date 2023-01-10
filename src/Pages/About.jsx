@@ -23,11 +23,11 @@ function About() {
         </Tabs>
       </Box>
       </div>
-        <div class="prodetails">
+        <div class="container">
             <div>
                 <img id="officeimg" src="/office image for about.jpeg" alt="image unavailable" />
             </div>
-            <span id="gibson">
+            <span id="officeworks">
 
                 Officeworks is the world’s biggest office lease and booking platform. You might know us from our world-class
                 facilities, our supportive community, or our awesome Officeworks utilities.<br/>
