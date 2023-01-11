@@ -4,36 +4,61 @@ import * as React from "react";
 import { useState } from "react";
 import { useContext } from "react";
 import Ckre from "./Calendar"
+import { NavLink } from "react-router-dom";
+import { Tab, Tabs, Box } from "@mui/material";
+import HomePage from "./HomePage";
+import Contact from "./Pages/Contact";
+import LogIn from "./LogIn";
+import About from "./Pages/About";
 
 function Class() {
   // const value = useContext(CalendarApi)
   return (
     <div>
+              <div>
+        <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+        <Tabs className="contactnav" centered>
+          <NavLink to='/Home' element={<HomePage/>} > <Tab label="cyber pro" /></NavLink>
+          <NavLink> <Tab label="meeting rooms" /></NavLink>
+          <NavLink> <Tab label="lecture rooms" /></NavLink>
+          <NavLink> <Tab label="classrooms" /></NavLink>
+          <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
+          <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
+          <NavLink to='/Login' element={<LogIn/>}> <Tab label="log in" /></NavLink>
+        </Tabs>
+      </Box>
+      </div>
       <div id="fleximgdescription">
         <div id="classinfo">
           <div>
-            <h2>classnumber</h2>
+            <h2>Yosemite Classroom</h2>
           </div>
           <div>
-            <p>descripsion</p>
+            <p>A state of the art academic classroom</p>
           </div>
         </div>
         <div id="classimg">
           <img
-            src="https://www.cta.org/wp-content/uploads/2020/03/empty-classroom.jpg"
+            src="weworkoffice.png"
             alt="classroom img"
           />
         </div>
       </div>
       <div>
-      <div className="calendar">
-      <div>
-        <Ckre />
+        <div className="calendar">
+          <div>
+            <Ckre />
+          </div>
+        </div>
       </div>
-    </div>
-      </div>
-      <div>info</div>
-      <div>
+      <span id="officeinfo">
+        Elevated, move-in ready private workspace for teams of 20 or more.<br/>
+        Private amenities can include interior offices, meeting rooms, lounges, pantries.<br/> and more
+        Customise your workspace with a suite of office add-ons, finishes and enhancements.
+      </span>
+      <span id="availability">Check availability now!</span>
+      <span id="availabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
+      <div id="cancellation">
         <h3>Cancellation rules and company policy</h3>
         <ul>
           <li>
@@ -47,8 +72,8 @@ function Class() {
           <li>Cancellations made within 3 - 6 days will incur a 20% fee.</li>
           <li>
             I understand that I am holding a spot so reservations for this event
-            are nonrefundable. If I am unable to attend I understand that I can
-            transfer to a friend
+            are nonrefundable.<br /> If I am unable to attend I understand that I can
+            transfer to a friend.
           </li>
         </ul>
       </div>

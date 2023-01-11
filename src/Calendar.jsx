@@ -107,7 +107,7 @@ export default function Ckre() {
       })}</p> : <p></p>}
 
 
-      start time
+      From
       <select
         name="start time"
         id=""
@@ -121,7 +121,7 @@ export default function Ckre() {
         <option value={13}>13:00</option>
         <option value={14}>14:00</option>
       </select>
-      end time
+      Until
       <select
         name="end time"
         id=""
@@ -135,7 +135,7 @@ export default function Ckre() {
         <option value={13}>13:00</option>
         <option value={14}>14:00</option>
       </select>
-      <button onClick={() => name()}>semememek</button>
+      <button id="semek" onClick={() => name()}>Submit</button>
       {starttime} <br />
       {endtime}
     </div>
