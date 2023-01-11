@@ -1,11 +1,12 @@
 import "./class.css";
 import * as React from "react";
-import Calendar from '../src/Calendar'
+// import Calendar from '../src/Calendar'
 import { useState } from "react";
 import { useContext } from "react";
+import Ckre from "./Calendar"
 
 function Class() {
-  const value = useContext(CalendarApi)
+  // const value = useContext(CalendarApi)
   return (
     <div>
       <div id="fleximgdescription">
@@ -27,44 +28,8 @@ function Class() {
       <div>
       <div className="calendar">
       <div>
-        <Calendar
-          onChange={onChange}
-          value={value}
-          onClickDay={(e) => handleClick(e)}
-        />
+        <Ckre />
       </div>
-      <p>{chose?.toString()?.slice(0, 15)}</p>
-      start time
-      <select
-        name="start time"
-        id=""
-        onChange={(e) => setstarttime(e.target.value)}
-      >
-        <option value={8}>8:00</option>
-        <option value={9}>9:00</option>
-        <option value={10}>10:00</option>
-        <option value={11}>11:00</option>
-        <option value={12}>12:00</option>
-        <option value={13}>13:00</option>
-        <option value={14}>14:00</option>
-      </select>
-      end time
-      <select
-        name="end time"
-        id=""
-        onChange={(e) => setendtime(e.target.value)}
-      >
-        <option value={8}>8:00</option>
-        <option value={9}>9:00</option>
-        <option value={10}>10:00</option>
-        <option value={11}>11:00</option>
-        <option value={12}>12:00</option>
-        <option value={13}>13:00</option>
-        <option value={14}>14:00</option>
-      </select>
-      <button onClick={() => name()}>semememek</button>
-      {starttime} <br />
-      {endtime}
     </div>
       </div>
       <div>info</div>

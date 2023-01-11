@@ -11,6 +11,7 @@ export default function Ckre() {
   const [starttime, setstarttime] = useState(8);
   const [endtime, setendtime] = useState(0);
   const [array, setarray] = useState([]);
+  console.log(chose);
 
   //   console.log(chose);
   //   console.log(day);
