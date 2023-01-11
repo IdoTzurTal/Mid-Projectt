@@ -6,11 +6,12 @@ import "react-calendar/dist/Calendar.css";
 export default function Ckre() {
   const [value, onChange] = useState(new Date());
   const [chose, setchose] = useState();
-  const [day, setDay] = useState([{}]);
+  const [day, setDay] = useState([]);
   const [dayId, setDayId] = useState();
   const [starttime, setstarttime] = useState(8);
   const [endtime, setendtime] = useState(0);
   const [array, setarray] = useState([]);
+  const [lior,setLior]=useState(-1)
   console.log(chose);
 
   //   console.log(chose);
@@ -18,6 +19,8 @@ export default function Ckre() {
 //   console.log(starttime);
 //   console.log(endtime);
   function name() {
+    setLior(-1)
+    
    
     
     for (let index =  Number(starttime); index < Number(endtime); index++) {
@@ -25,20 +28,16 @@ export default function Ckre() {
       console.log(starttime);
       console.log(endtime);
     }
-    console.log(array);
-  
-  }
-
-  function dayinfo() {
+   
     setDay([
       ...day,
       {
-        id: dayId,
+        id: chose?.toString()?.slice(0, 15),
         day: chose?.toString()?.slice(0, 3),
         month: chose?.toString()?.slice(4, 7),
         monthnum: chose?.toString()?.slice(8, 10),
         year: chose?.toString()?.slice(11, 15),
-        // selected:[...selected.value,],
+        selected:[array],
         eightnine: true,
         nineten: true,
         teneleven: true,
@@ -46,12 +45,34 @@ export default function Ckre() {
         twelveone: true,
         onetwo: true,
       },
+      
     ]);
-  }
+    console.log(array);
 
+    setarray([])
+    // 
+  }
+  
   const handleClick = (e) => {
+    console.log("this",lior);
+    console.log(day)
     setchose(e);
-    setDayId(chose?.toString()?.slice(0, 15)?.replace(" ", ""));
+    // setDayId();
+    const check=e.toString().slice(0, 15)
+    for(let j =0;j<day.length;j++){
+      console.log("hey");
+      if(day[j].id===check){
+        
+        console.log(day[j]);
+        setLior(j); 
+        break
+      }
+      else{
+        console.log(day+"cvngbdgc");
+        setLior(-1)
+      }
+    }
+    
   };
 
   return (
@@ -64,6 +85,11 @@ export default function Ckre() {
         />
       </div>
       <p>{chose?.toString()?.slice(0, 15)}</p>
+      {lior >= 0 ? <p>{day[lior].selected.map((selectedHours)=>{
+        return<span>{selectedHours+","}</span>
+      })}</p>: <p></p>}
+
+      
       start time
       <select
         name="start time"

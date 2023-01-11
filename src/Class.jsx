@@ -1,4 +1,4 @@
-import "./class.css";
+import "./Class.css";
 import * as React from "react";
 // import Calendar from '../src/Calendar'
 import { useState } from "react";
