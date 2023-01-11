@@ -1,0 +1,20 @@
+#fleximgdescription {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: space-around;
+}
+#classimg img {
+  object-fit: fill;
+  height: auto;
+  width: 20vw;
+}
+#classinfo {
+  text-align: left;
+}
+h3 {
+  text-align: start;
+}
+li {
+  list-style-type: none;
+  text-align: start;
+}

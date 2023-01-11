@@ -1,33 +1,32 @@
-.firstrow {
-    display: flex;
-    justify-content: space-around;
-    height: 14vh;
-    padding-top: 4vh;
-    z-index: 2;
+.contactnav a {
+    text-decoration: none;
+    color: white;
+}
+.contactnav {
+    background-color: rgb(37, 29, 29);
+    width: 100vw;
 }
 
-.firstrow>* {
-    background-color: white;
-    padding: 10%;
-    z-index: 2;
+#officecomms {
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    opacity: 58%;
 }
-#guitar1 {
+
+#wedlove {
     color: black;
     font-size: xx-large;
     font-weight: 500;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-right: 2vw;
-    padding-left: 3vw;
+    position: absolute;
     z-index: 2;
-}
-.firstwrite {
-    display: flex;
-    justify-content: space-evenly;
-    height: 20vh;
-    z-index: 2;
+    bottom: 62%;
+    left: 40%;
+    text-shadow: 1px 1px 5px  black;
 }
 
-.prodetails {
+.content {
     height: 50vh;
     width: 100vw;
     display: flex;
@@ -35,13 +34,17 @@
     z-index: 2;
 }
 
-.prodetails>* {
-    width: 20vw;
-    z-index: 2;
-}
-#gibson {
+#contactdetails {
     font-style: italic;
-    font-family: system-ui;
+    color: black;
+    font-size: x-large;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 2vw;
+    padding-left: 3vw;
+    position: absolute;
     z-index: 2;
-    width: 22vw;
+    bottom: 50%;
+    left: 20%;
+    text-shadow: 1px 1px 5px  black;
 }
