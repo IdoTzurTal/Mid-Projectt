@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import Class from "./Class";
 import { createContext } from "react";
 import Lecture from "./Lecture";
+import Meeting from "./Meeting";
 
 function App() {
   const CalendarApi = createContext()
@@ -21,6 +22,7 @@ function App() {
         <Route path='/Contact' element={<Contact />}></Route>
         <Route path='/Classroom' element={<Class />}></Route>
         <Route path='/Lectureroom' element={<Lecture />}></Route>
+        <Route path='/Meetingroom' element={<Meeting/>}></Route>
       </Routes>
     </div>
   );
