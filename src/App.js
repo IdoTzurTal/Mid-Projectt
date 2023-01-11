@@ -9,6 +9,7 @@ import { Route, Routes } from 'react-router-dom';
 import Class from "./Class";
 import { createContext } from "react";
 import Lecture from "./Lecture";
+import Meeting from "./Meeting";
 import Ckre from "./Calendar";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/Contact' element={<Contact />}></Route>
         <Route path='/Classroom' element={<Class />}></Route>
         <Route path='/Lectureroom' element={<Lecture />}></Route>
+        <Route path='/Meetingroom' element={<Meeting/>}></Route>
       </Routes>
     </div>
   );
