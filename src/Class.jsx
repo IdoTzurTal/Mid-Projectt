@@ -57,6 +57,17 @@ function Class() {
           <div id="classavailabilitycontainer">
             <span id="classavailability">Check availability now!</span>
             <span id="classavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
+            <span className="amenities">What this place offers</span>
+              <ul className="amenitieslist">
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+              </ul>          
           </div>
           <Ckre />
         </div>

@@ -87,3 +87,16 @@ li {
   padding: 3%;
   margin: 3%;
 }
+
+.amenities {
+  padding-top: 12vh;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.amenitieslist {
+  padding-top: 2vh;
+  font-size: larger;
+  font-family: system-ui;
+  font-style: italic;
+}
