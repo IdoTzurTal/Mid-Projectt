@@ -65,7 +65,6 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 22vh;
   padding-right: 13vw;
 }
 
@@ -86,4 +85,17 @@ li {
 #calendarinclasspage select {
   padding: 3%;
   margin: 3%;
+}
+
+.amenities {
+  padding-top: 12vh;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.amenitieslist {
+  padding-top: 2vh;
+  font-size: larger;
+  font-family: system-ui;
+  font-style: italic;
 }
