@@ -2,5 +2,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    position: absolute;
+    left: 59%;
+    top: 106%;
+
+}
+.calendar>*{
+    margin: 4%;
+}
+.calendar select{
+    padding: 2%
+}
+
+#semek{
+    font-size: large;
+    padding: 3%;
+    border-style: none;
+    color: white;
+    background-color: rgb(62, 50, 50);
+}
+#semek:hover{
+    background-color: gray;
+    color: rgb(62, 50, 50);
 }
