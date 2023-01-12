@@ -40,29 +40,29 @@ function Lecture() {
                         <p>University grade, auditorium styled lecture hall</p>
                     </div>
                 </div>
-                <div id="lectureimg">
-                    <img
-                        src="weworkoffice.png"
-                        alt="classroom img"
-                    />
-                </div>
             </div>
-            <div>
-                <div className="calendar">
-                    <div>
-                        <Ckre />
+            <div id="lectureimg">
+                <span id="officeinfolecture">
+                    The architectural design of 360 degree lecture hall is a flipped traditional lecture hall with a circular shape.<br />
+                    Students seating stations are in a perfect circle regardless of which type of furniture is used in new hall.<br />
+                    The teacher’s place is in the middle rather than at front.
+                </span>
+                <img
+                    src="weworkoffice.png"
+                    alt="classroom img"
+                />
+            </div>
+            <div className="calendarcontainerinlecturepage">
+                <div id="calendarinlecturepage">
+                    <div id="lectureavailabilitycontainer">
+                        <span id="lectureavailability">Check availability now!</span>
+                        <span id="lectureavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
                     </div>
+                    <Ckre />
                 </div>
             </div>
-            <span id="officeinfolecture">
-                The architectural design of 360 degree lecture hall is a flipped traditional lecture hall with a circular shape.<br/>
-                Students seating stations are in a perfect circle regardless of which type of furniture is used in new hall.<br/>
-                The teacher’s place is in the middle rather than at front.
-            </span>
-            <div id="lectureavailabilitycontainer">
-            <span id="lectureavailability">Check availability now!</span>
-            <span id="lectureavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
-            </div>
+
+
             <div id="lecturecancellation">
                 <h3>Cancellation rules and company policy</h3>
                 <ul>

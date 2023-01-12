@@ -52,9 +52,7 @@ function Class() {
           alt="classroom img"
         />
       </div>
-
-      <div id="calendarcontainerinclasspage">
-
+      <div className="calendarcontainerinclasspage">
         <div id="calendarinclasspage">
           <div id="classavailabilitycontainer">
             <span id="classavailability">Check availability now!</span>
@@ -62,7 +60,6 @@ function Class() {
           </div>
           <Ckre />
         </div>
-
       </div>
 
 

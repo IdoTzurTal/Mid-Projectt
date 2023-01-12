@@ -74,7 +74,6 @@ li {
   flex-direction: column;
   align-items: center;
   padding-right: 5vw;
-  width: fit-content;
 }
 
 #calendarinclasspage {
@@ -83,6 +82,7 @@ li {
   padding-right: 7vw;
   padding-top: 6vh;
 }
+
 #calendarinclasspage select {
   padding: 3%;
   margin: 3%;
