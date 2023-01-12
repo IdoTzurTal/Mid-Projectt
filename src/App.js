@@ -26,6 +26,8 @@ function App() {
         <Route path='/Lectureroom' element={<Lecture />}></Route>
         <Route path='/Meetingroom' element={<Meeting/>}></Route>
       </Routes>
+      </Routes> */}
+     <Ckre></Ckre>
     </div>
   );
 }
