@@ -10,7 +10,8 @@ import HomePage from "./HomePage";
 import Contact from "./Pages/Contact";
 import LogIn from "./LogIn";
 import About from "./Pages/About";
-import Lecture from "./Lecture"
+import Lecture from "./Lecture";
+import Meeting from "./Meeting";
 
 
 function Class() {
@@ -21,7 +22,7 @@ function Class() {
         <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
         <Tabs className="contactnav" centered>
           <NavLink to='/Home' element={<HomePage/>} > <Tab label="cyber pro" /></NavLink>
-          <NavLink> <Tab label="meeting rooms" /></NavLink>
+          <NavLink to='/Meetingroom' element={<Meeting />}> <Tab label="meeting rooms" /></NavLink>
           <NavLink to='/Lectureroom' element={<Lecture/>}> <Tab label="lecture rooms" /></NavLink>
           <NavLink to='/Classroom' element={<Class/>}> <Tab label="classrooms" /></NavLink>
           <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>

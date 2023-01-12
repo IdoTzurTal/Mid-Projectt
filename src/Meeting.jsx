@@ -1,4 +1,4 @@
-import "./Lecture.css";
+import "./Meeting.css";
 import * as React from "react";
 // import Calendar from '../src/Calendar'
 import { useState } from "react";
@@ -11,10 +11,10 @@ import Contact from "./Pages/Contact";
 import LogIn from "./LogIn";
 import About from "./Pages/About";
 import Class from "./Class";
-import Meeting from "./Meeting";
+import Lecture from "./Lecture";
 
 
-function Lecture() {
+function Meeting() {
     // const value = useContext(CalendarApi)
     return (
         <div>
@@ -34,15 +34,15 @@ function Lecture() {
             <div id="fleximgdescription">
                 <div id="classinfo">
                     <div>
-                        <h2>Sequoia Lecture Hall</h2>
+                        <h2>Yellowstone Meeting Room</h2>
                     </div>
                     <div>
-                        <p>University grade, auditorium styled lecture hall</p>
+                        <p>Top of the line, fully equipped meeting room</p>
                     </div>
                 </div>
                 <div id="classimg">
                     <img
-                        src="weworkoffice.png"
+                        src="weworkmeetingroom.png"
                         alt="classroom img"
                     />
                 </div>
@@ -55,9 +55,10 @@ function Lecture() {
                 </div>
             </div>
             <span id="officeinfo">
-                The architectural design of 360 degree lecture hall is a flipped traditional lecture hall with a circular shape.<br/>
-                Students seating stations are in a perfect circle regardless of which type of furniture is used in new hall.<br/>
-                The teacher’s place is in the middle rather than at front.
+                Good for small and large groups.<br/>
+                High-speed Internet and conference A/V tools.<br/>
+                For all meeting types: private, business and executive.<br/>
+                Enjoy shared amenities and business essentials.
             </span>
             <span id="availability">Check availability now!</span>
             <span id="availabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
@@ -83,4 +84,4 @@ function Lecture() {
         </div>
     );
 }
-export default Lecture;
+export default Meeting;
