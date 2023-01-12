@@ -12,12 +12,30 @@ function HomeAfterLogin() {
     <div>
       <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
         <Tabs className="hometabs" centered>
-          <NavLink to='/Home' element={<HomePage/>} > <Tab label="cyber pro" /></NavLink>
-          <NavLink to='/Meetingroom' element={<Meeting />}> <Tab label="meeting rooms" /></NavLink>
-          <NavLink to='/Lectureroom' element={<Lecture />}> <Tab label="lecture rooms" /></NavLink>
-          <NavLink to='/Classroom' element={<Class/>} > <Tab label="classrooms" /></NavLink>
-          <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
-          <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
+          <NavLink to="/Home" element={<HomePage />}>
+            {" "}
+            <Tab label="cyber pro" />
+          </NavLink>
+          <NavLink to="/Meetingroom" element={<Meeting />}>
+            {" "}
+            <Tab label="meeting rooms" />
+          </NavLink>
+          <NavLink to="/Lectureroom" element={<Lecture />}>
+            {" "}
+            <Tab label="lecture rooms" />
+          </NavLink>
+          <NavLink to="/Classroom" element={<Class />}>
+            {" "}
+            <Tab label="classrooms" />
+          </NavLink>
+          <NavLink to="/About" element={<About />}>
+            {" "}
+            <Tab label="about" />
+          </NavLink>
+          <NavLink to="/Contact" element={<Contact />}>
+            {" "}
+            <Tab label="contact" />
+          </NavLink>
         </Tabs>
       </Box>
       <div id="mainhomeimg"></div>
@@ -36,7 +54,11 @@ function HomeAfterLogin() {
         </div>
         <div id="info">
           <p>
-          CYBERPRO Global is a world-class cyber education and training provider. We’ll support you in every stage of the process, from selecting the proper training program, to customizing it to fit your organization’s needs, and finally to facilitating the training in a unique and hands-on environment.
+            CYBERPRO Global is a world-class cyber education and training
+            provider. We’ll support you in every stage of the process, from
+            selecting the proper training program, to customizing it to fit your
+            organization’s needs, and finally to facilitating the training in a
+            unique and hands-on environment.
           </p>
         </div>
       </div>
