@@ -6,7 +6,15 @@ import "./HomeAfterLogin.css";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaMailBulk } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import Meeting from "./Meeting";
 import Class from "./Class";
+import Lecture from "./Lecture";
+import Contact from "./Pages/Contact";
+import About from "./Pages/About";
+import HomePage from "./HomePage";
+import Search from "./Search";
+
 function HomeAfterLogin() {
   return (
     <div>
@@ -18,6 +26,7 @@ function HomeAfterLogin() {
           <NavLink to='/Classroom' element={<Class/>} > <Tab label="classrooms" /></NavLink>
           <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
           <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
+          <NavLink to='/Search' element={<Search/>}> <Tab label="search" /></NavLink>
         </Tabs>
       </Box>
       <div id="mainhomeimg"></div>

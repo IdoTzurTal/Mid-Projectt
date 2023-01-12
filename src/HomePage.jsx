@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 import About from "./Pages/About";
 import LogIn from "./LogIn";
 import Contact from "./Pages/Contact";
+import Search from "./Search";
 
 function HomePage() {
   return (
@@ -20,6 +21,7 @@ function HomePage() {
           <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
           <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
           <NavLink to='/Login' element={<LogIn/>}> <Tab label="log in" /></NavLink>
+          
         </Tabs>
       </Box>
       <div id="mainhomeimg"></div>

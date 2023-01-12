@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-export default function Search(params) {
+import { useContext } from "react";
+import { Detail } from "./Context";
+import Context from "./Context";
+import { Children } from "react";
+
+export default function Search() {
   const [typecheck, settypechek] = useState();
   const [favorite, setfavorite] = useState(false);
   const [fav, setfav] = useState([
@@ -13,99 +18,9 @@ export default function Search(params) {
     "not favorite",
     "not favorite",
   ]);
-  const [rooms, setrooms] = useState([
-    {
-      name: "room 1",
-      type: "conferenceHall",
-      capicity: 150,
-      aircondition: "yes",
-      porjector: "yes",
-      zoom: "yes",
-      board: "no",
-      favorite: false,
-    },
-    {
-      name: "room 2",
-      type: "conferenceHall",
-      capicity: 200,
-      aircondition: "yes",
-      porjector: "no",
-      zoom: "no",
-      board: "yes",
-      favorite: false,
-    },
-    {
-      name: "room 3",
-      type: "conferenceHall",
-      capicity: 300,
-      aircondition: "yes",
-      porjector: "yes",
-      zoom: "yes",
-      board: "no",
-      favorite: false,
-    },
+ 
+  const {rooms, setrooms} = useContext(Detail);
 
-    {
-      name: "room 4",
-      type: "classes",
-      capicity: 25,
-      aircondition: "yes",
-      porjector: "yes",
-      zoom: "yes",
-      board: "yes",
-      favorite: false,
-    },
-    {
-      name: "room 5",
-      type: "classes",
-      capicity: 20,
-      aircondition: "no",
-      porjector: "no",
-      zoom: "no",
-      board: "yes",
-      favorite: false,
-    },
-    {
-      name: "room 6",
-      type: "classes",
-      capicity: 35,
-      aircondition: "yes",
-      porjector: "no",
-      zoom: "no",
-      board: "yes",
-      favorite: false,
-    },
-    {
-      name: "room 7",
-      type: "meetroom",
-      capicity: 15,
-      aircondition: "yes",
-      porjector: "yes",
-      zoom: "no",
-      board: "yes",
-      favorite: false,
-    },
-    {
-      name: "room 8",
-      type: "meetroom",
-      capicity: 6,
-      aircondition: "no",
-      porjector: "no",
-      zoom: "no",
-      board: "yes",
-      favorite: false,
-    },
-    {
-      name: "room 9",
-      type: "meetroom",
-      capicity: 10,
-      aircondition: "yes",
-      porjector: "no",
-      zoom: "no",
-      board: "yes",
-      favorite: false,
-    },
-  ]);
 
   function Fun() {
     const temp = [];
