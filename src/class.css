@@ -1,0 +1,63 @@
+#fleximgdescription {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: space-around;
+}
+
+#classimg img {
+  object-fit: fill;
+  height: auto;
+  width: 45vw;
+  position: absolute;
+  z-index: 2;
+  right: 6%;
+  top: 18%;
+}
+
+#classinfo {
+  text-align: left;
+  position: relative;
+  right: 12%;
+  font-size: xx-large;
+  font-family: sans-serif;
+}
+
+#officeinfo {
+  position: absolute;
+  right: 56%;
+  bottom: 68%;
+  width: 40%;
+  text-align: left;
+  font-size: x-large;
+  top: 48%;
+  font-style: italic;
+}
+
+h3 {
+  text-align: start;
+}
+
+li {
+  list-style-type: none;
+  text-align: start;
+}
+
+#cancellation {
+  position: absolute;
+  top: 200%;
+  left: 9%;
+  font-size: large;
+}
+
+#availability {
+  position: absolute;
+  top: 130%;
+  font-size: xxx-large;
+  right: 60%;
+}
+#availabilitydescription{
+  position: absolute;
+  right: 55%;
+  top: 140%;
+  font-style: italic;
+}

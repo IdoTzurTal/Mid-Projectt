@@ -2,24 +2,22 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import "./homepage.css";
+import "./HomeAfterLogin.css";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaMailBulk } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-import About from "./Pages/About";
-import LogIn from "./LogIn";
-import Contact from "./Pages/Contact";
-
-function HomePage() {
+import Class from "./Class";
+function HomeAfterLogin() {
   return (
     <div>
       <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-        <Tabs className="homebnav" centered>
+        <Tabs className="hometabs" centered>
           <NavLink to='/Home' element={<HomePage/>} > <Tab label="cyber pro" /></NavLink>
+          <NavLink to='/Meetingroom' element={<Meeting />}> <Tab label="meeting rooms" /></NavLink>
+          <NavLink to='/Lectureroom' element={<Lecture />}> <Tab label="lecture rooms" /></NavLink>
+          <NavLink to='/Classroom' element={<Class/>} > <Tab label="classrooms" /></NavLink>
           <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
           <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
-          <NavLink to='/Login' element={<LogIn/>}> <Tab label="log in" /></NavLink>
         </Tabs>
       </Box>
       <div id="mainhomeimg"></div>
@@ -45,4 +43,4 @@ function HomePage() {
     </div>
   );
 }
-export default HomePage;
+export default HomeAfterLogin;

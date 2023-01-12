@@ -6,51 +6,114 @@ import "react-calendar/dist/Calendar.css";
 export default function Ckre() {
   const [value, onChange] = useState(new Date());
   const [chose, setchose] = useState();
-  const [day, setDay] = useState([{}]);
+  const [day, setDay] = useState([]);
   const [dayId, setDayId] = useState();
   const [starttime, setstarttime] = useState(8);
   const [endtime, setendtime] = useState(0);
   const [array, setarray] = useState([]);
+  const [lior, setLior] = useState(-1);
+  const [eveneven, seteveneven] = useState(false);
+  const [objNum, setObjNum] = useState();
+  console.log(chose);
 
   //   console.log(chose);
   //   console.log(day);
-//   console.log(starttime);
-//   console.log(endtime);
+  //   console.log(starttime);
+  //   console.log(endtime);
   function name() {
-   
-    
-    for (let index =  Number(starttime); index < Number(endtime); index++) {
-      array.push(index)
-      console.log(starttime);
-      console.log(endtime);
-    }
-    console.log(array);
-  
-  }
+    setLior(-1);
 
-  function dayinfo() {
-    setDay([
-      ...day,
-      {
-        id: dayId,
-        day: chose?.toString()?.slice(0, 3),
-        month: chose?.toString()?.slice(4, 7),
-        monthnum: chose?.toString()?.slice(8, 10),
-        year: chose?.toString()?.slice(11, 15),
-        // selected:[...selected.value,],
-        eightnine: true,
-        nineten: true,
-        teneleven: true,
-        eleventwelve: true,
-        twelveone: true,
-        onetwo: true,
-      },
-    ]);
+    if (eveneven === "true") {
+      console.log("liorrrrrr");
+      let x = 1;
+      let y = [];
+      for (let index = Number(starttime); index < Number(endtime); index++) {
+        // array.push(index)
+        console.log(objNum);
+        console.log(day[objNum]?.selected?.includes(index));
+        if (!day[objNum].selected.includes(index)) {
+          y = [...y, index];
+          console.log("matannnn");
+
+          // day[objNum].selected.push(index);
+          setarray([]);
+        } else {
+          console.log("matannnn");
+          y = [];
+          x = 2;
+          break;
+        }
+      }
+      // day[objNum].selected.push(y);
+      if (x === 2) {
+        alert("error");
+      } else {
+        for (let index = Number(starttime); index < Number(endtime); index++) {
+          day[objNum].selected.push(y);
+        }
+        x = 4;
+      }
+    } else {
+      console.log("liorrrrrr");
+      for (let index = Number(starttime); index < Number(endtime); index++) {
+        array.push(index);
+        console.log(starttime);
+        console.log(endtime);
+      }
+
+      setDay([
+        ...day,
+        {
+          id: chose?.toString()?.slice(0, 15),
+          day: chose?.toString()?.slice(0, 3),
+          month: chose?.toString()?.slice(4, 7),
+          monthnum: chose?.toString()?.slice(8, 10),
+          year: chose?.toString()?.slice(11, 15),
+          selected: [...array],
+          eightnine: true,
+          nineten: true,
+          teneleven: true,
+          eleventwelve: true,
+          twelveone: true,
+          onetwo: true,
+        },
+      ]);
+      console.log(array);
+
+      setarray([]);
+    }
   }
 
   const handleClick = (e) => {
+    console.log(day);
     setchose(e);
-    setDayId(chose?.toString()?.slice(0, 15)?.replace(" ", ""));
+    // setDayId();
+    // objNum;
+    let check = e.toString().slice(0, 15);
+    for (let j = 0; j < day.length; j++) {
+      console.log("hey");
+      console.log("liorrrrrr");
+      if (day[j].id === check) {
+        console.log("liorrrrrr");
+        seteveneven("true");
+        // setObjNum(j);
+        setObjNum(j);
+        console.log(objNum);
+        // bhsdbvhsnvjdsjnvhdsbnhdsncdnjhdnhdsbvhds
+
+        console.log(day[j]);
+        setLior(j);
+        break;
+      } else {
+        console.log(day, "cvngbdgc");
+        setLior(-1);
+        seteveneven("false");
+        console.log("liorrrrrr");
+        setObjNum(7);
+        console.log(objNum);
+        // dhbfhgdbfdsgfdgfdshfsdgfds
+      }
+    }
   };
 
   return (
@@ -63,7 +126,22 @@ export default function Ckre() {
         />
       </div>
       <p>{chose?.toString()?.slice(0, 15)}</p>
-      start time
+      <p>The following hours are already booked:</p>
+      {lior >= 0 ? (
+        <p>
+          {day[lior].selected.map((selectedHours) => {
+            console.log(selectedHours);
+            return (
+              <div>
+                <span>{selectedHours}:00</span>
+              </div>
+            );
+          })}
+        </p>
+      ) : (
+        <p></p>
+      )}
+      From
       <select
         name="start time"
         id=""
@@ -77,7 +155,7 @@ export default function Ckre() {
         <option value={13}>13:00</option>
         <option value={14}>14:00</option>
       </select>
-      end time
+      Until
       <select
         name="end time"
         id=""
@@ -91,7 +169,9 @@ export default function Ckre() {
         <option value={13}>13:00</option>
         <option value={14}>14:00</option>
       </select>
-      <button onClick={() => name()}>semememek</button>
+      <button id="semek" onClick={() => name()}>
+        Submit
+      </button>
       {starttime} <br />
       {endtime}
     </div>
