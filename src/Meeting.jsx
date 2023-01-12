@@ -63,7 +63,6 @@ function Meeting() {
                     <Ckre />
                 </div>
             </div>
-
             <div id="meetingcancellation">
                 <h3>Cancellation rules and company policy</h3>
                 <ul>
