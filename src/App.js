@@ -7,6 +7,9 @@ import Contact from './Pages/Contact'
 import Class from "./Class";
 import { createContext, useContext } from "react";
 import Lecture from "./Lecture";
+import Lecturebase from "./Lecturebase";
+import Lecture2 from "./Lecture2";
+import Lecture3 from "./Lecture3";
 import Meeting from "./Meeting";
 import Ckre from "./Calendar";
 import Search from "./Search";

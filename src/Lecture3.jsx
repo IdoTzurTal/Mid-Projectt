@@ -1,4 +1,4 @@
-import "./Meeting.css";
+import "./Lecture3.css";
 import * as React from "react";
 // import Calendar from '../src/Calendar'
 import { useState } from "react";
@@ -11,12 +11,10 @@ import Contact from "./Pages/Contact";
 import LogIn from "./LogIn";
 import About from "./Pages/About";
 import Class from "./Class";
-import Lecture from "./Lecture";
-import Classbase from "./Classbase"
-import Lecturebase from "./Lecturebase"
+import Meeting from "./Meeting";
 
 
-function Meeting() {
+function Lecture3() {
     // const value = useContext(CalendarApi)
     return (
         <div>
@@ -25,42 +23,40 @@ function Meeting() {
                     <Tabs className="contactnav" centered>
                         <NavLink to='/Home' element={<HomePage />} > <Tab label="cyber pro" /></NavLink>
                         <NavLink to='/Meetingroom' element={<Meeting />}> <Tab label="meeting rooms" /></NavLink>
-                        <NavLink to='/Lecturebase' element={<Lecturebase />}> <Tab label="lecture rooms" /></NavLink>
-                        <NavLink to='/Classbase' element={<Classbase />}> <Tab label="classrooms" /></NavLink>
+                        <NavLink to='/Lectureroom' element={<Lecture3 />}> <Tab label="lecture rooms" /></NavLink>
+                        <NavLink to='/Classroom' element={<Class />}> <Tab label="classrooms" /></NavLink>
                         <NavLink to='/About' element={<About />} > <Tab label="about" /></NavLink>
                         <NavLink to='/Contact' element={<Contact />} > <Tab label="contact" /></NavLink>
                         <NavLink to='/Login' element={<LogIn />}> <Tab label="log in" /></NavLink>
                     </Tabs>
                 </Box>
             </div>
-            <div id="fleximgdescriptionmeeting">
-                <div id="meetinginfo">
+            <div id="fleximgdescriptionlecture">
+                <div id="lectureinfo">
                     <div>
-                        <h2>Yellowstone Meeting Room</h2>
+                        <h2>Sequoia Lecture Hall</h2>
                     </div>
                     <div>
-                        <p>Top of the line, fully equipped meeting room</p>
+                        <p>University grade, auditorium styled lecture hall</p>
                     </div>
                 </div>
             </div>
-            <div id="meetingimg">
-                <span id="officeinfomeeting">
-                    Good for small and large groups.<br />
-                    High-speed Internet and conference A/V tools.<br />
-                    For all meeting types: private, business and executive.<br />
-                    Enjoy shared amenities and business essentials.
+            <div id="lectureimg">
+                <span id="officeinfolecture">
+                    The architectural design of 360 degree lecture hall is a flipped traditional lecture hall with a circular shape.<br />
+                    Students seating stations are in a perfect circle regardless of which type of furniture is used in new hall.<br />
+                    The teacher’s place is in the middle rather than at front.
                 </span>
                 <img
-                    src="weworkmeetingroom.png"
+                    src="weworkoffice.png"
                     alt="classroom img"
                 />
             </div>
-
-            <div className="calendarcontainerinmeetingpage">
-                <div id="calendarinmeetingpage">
-                    <div id="meetingavailabilitycontainer">
-                        <span id="meetingavailability">Check availability now!</span>
-                        <span id="meetingavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
+            <div className="calendarcontainerinlecturepage">
+                <div id="calendarinlecturepage">
+                    <div id="lectureavailabilitycontainer">
+                        <span id="lectureavailability">Check availability now!</span>
+                        <span id="lectureavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
                         <span className="amenities">What this place offers</span>
                         <ul className="amenitieslist">
                             <li>item</li>
@@ -76,7 +72,9 @@ function Meeting() {
                     <Ckre />
                 </div>
             </div>
-            <div id="meetingcancellation">
+
+
+            <div id="lecturecancellation">
                 <h3>Cancellation rules and company policy</h3>
                 <ul>
                     <li>
@@ -98,4 +96,4 @@ function Meeting() {
         </div>
     );
 }
-export default Meeting;
+export default Lecture3;

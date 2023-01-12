@@ -1,4 +1,4 @@
-import "./Class.css";
+import "./Class2.css";
 import * as React from "react";
 // import Calendar from '../src/Calendar'
 import { useState } from "react";
@@ -12,20 +12,19 @@ import LogIn from "./LogIn";
 import About from "./Pages/About";
 import Lecture from "./Lecture";
 import Meeting from "./Meeting";
-import Meetingbase from "./Meetingbase";
-import Lecturebase from "./Lecturebase"
 
-function Class() {
+
+function Class2() {
   // const value = useContext(CalendarApi)
   return (
-      <div>
+    <div>
       <div>
         <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
           <Tabs className="contactnav" centered>
             <NavLink to='/Home' element={<HomePage />} > <Tab label="cyber pro" /></NavLink>
-            <NavLink to='/Meetingbase' element={<Meetingbase />}> <Tab label="meeting rooms" /></NavLink>
-            <NavLink to='/Lecturebase' element={<Lecturebase />}> <Tab label="lecture rooms" /></NavLink>
-            <NavLink to='/Classroom' element={<Class />}> <Tab label="classrooms" /></NavLink>
+            <NavLink to='/Meetingroom' element={<Meeting />}> <Tab label="meeting rooms" /></NavLink>
+            <NavLink to='/Lectureroom' element={<Lecture />}> <Tab label="lecture rooms" /></NavLink>
+            <NavLink to='/Classroom' element={<Class2 />}> <Tab label="classrooms" /></NavLink>
             <NavLink to='/About' element={<About />} > <Tab label="about" /></NavLink>
             <NavLink to='/Contact' element={<Contact />} > <Tab label="contact" /></NavLink>
             <NavLink to='/Login' element={<LogIn />}> <Tab label="log in" /></NavLink>
@@ -72,7 +71,6 @@ function Class() {
           </div>
           <Ckre />
         </div>
-
       </div>
 
 
@@ -98,4 +96,4 @@ function Class() {
     </div>
   );
 }
-export default Class;
+export default Class2;
