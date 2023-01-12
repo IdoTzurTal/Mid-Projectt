@@ -31,8 +31,8 @@ function Lecture() {
                     </Tabs>
                 </Box>
             </div>
-            <div id="fleximgdescription">
-                <div id="classinfo">
+            <div id="fleximgdescriptionlecture">
+                <div id="lectureinfo">
                     <div>
                         <h2>Sequoia Lecture Hall</h2>
                     </div>
@@ -40,7 +40,7 @@ function Lecture() {
                         <p>University grade, auditorium styled lecture hall</p>
                     </div>
                 </div>
-                <div id="classimg">
+                <div id="lectureimg">
                     <img
                         src="weworkoffice.png"
                         alt="classroom img"
@@ -54,14 +54,16 @@ function Lecture() {
                     </div>
                 </div>
             </div>
-            <span id="officeinfo">
+            <span id="officeinfolecture">
                 The architectural design of 360 degree lecture hall is a flipped traditional lecture hall with a circular shape.<br/>
                 Students seating stations are in a perfect circle regardless of which type of furniture is used in new hall.<br/>
                 The teacher’s place is in the middle rather than at front.
             </span>
-            <span id="availability">Check availability now!</span>
-            <span id="availabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
-            <div id="cancellation">
+            <div id="lectureavailabilitycontainer">
+            <span id="lectureavailability">Check availability now!</span>
+            <span id="lectureavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
+            </div>
+            <div id="lecturecancellation">
                 <h3>Cancellation rules and company policy</h3>
                 <ul>
                     <li>

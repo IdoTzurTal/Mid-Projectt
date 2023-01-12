@@ -1,10 +1,9 @@
-#fleximgdescription {
+#fleximgdescriptionlecture {
     display: flex;
-    /* justify-content: space-between; */
     justify-content: space-around;
   }
   
-  #classimg img {
+  #lectureimg img {
     object-fit: fill;
     height: auto;
     width: 45vw;
@@ -14,7 +13,7 @@
     top: 18%;
   }
   
-  #classinfo {
+  #lectureinfo {
     text-align: left;
     position: relative;
     right: 11%;
@@ -22,7 +21,7 @@
     font-family: sans-serif;
   }
   
-  #officeinfo {
+  #officeinfolecture {
     position: absolute;
     right: 56%;
     bottom: 68%;
@@ -42,22 +41,29 @@
     text-align: start;
   }
   
-  #cancellation {
+  #lecturecancellation {
     position: absolute;
     top: 200%;
     left: 9%;
     font-size: large;
   }
   
-  #availability {
+  #lectureavailability {
     position: absolute;
     top: 130%;
     font-size: xxx-large;
     right: 60%;
   }
-  #availabilitydescription{
+  #lectureavailabilitydescription{
     position: absolute;
     right: 55%;
     top: 140%;
     font-style: italic;
+  }
+  #lectureavailabilitycontainer {
+    display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 8vw;
+      padding-top: 55vh;
   }

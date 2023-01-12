@@ -91,8 +91,8 @@ export default function Ckre() {
   };
 
   return (
-    <div className="calendar">
-      <div>
+    <div className="calendarcontainerincalendarpage">
+      <div id="calendarincalendarpage">
         <Calendar
           onChange={onChange}
           value={value}
@@ -136,8 +136,6 @@ export default function Ckre() {
         <option value={14}>14:00</option>
       </select>
       <button id="semek" onClick={() => name()}>Submit</button>
-      {starttime} <br />
-      {endtime}
     </div>
   );
 }
