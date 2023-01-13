@@ -10,10 +10,7 @@ import HomePage from "./HomePage";
 import Contact from "./Pages/Contact";
 import LogIn from "./LogIn";
 import About from "./Pages/About";
-import Class from "./Class";
-import Meeting from "./Meeting";
-import Meetingbase from "./Meetingbase";
-import Classbase from "./Classbase";
+import Rooms from "./Rooms";
 
 
 function Lecture() {
@@ -24,9 +21,7 @@ function Lecture() {
                 <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
                     <Tabs className="contactnav" centered>
                         <NavLink to='/Home' element={<HomePage />} > <Tab label="cyber pro" /></NavLink>
-                        <NavLink to='/Meetingbase' element={<Meetingbase />}> <Tab label="meeting rooms" /></NavLink>
-                        <NavLink to='/Lectureroom' element={<Lecture />}> <Tab label="lecture rooms" /></NavLink>
-                        <NavLink to='/Classbase' element={<Classbase />}> <Tab label="classrooms" /></NavLink>
+                        <NavLink to='/Rooms' element={<Rooms />}> <Tab label="Rooms" /></NavLink>
                         <NavLink to='/About' element={<About />} > <Tab label="about" /></NavLink>
                         <NavLink to='/Contact' element={<Contact />} > <Tab label="contact" /></NavLink>
                         <NavLink to='/Login' element={<LogIn />}> <Tab label="log in" /></NavLink>
