@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 import About from "./Pages/About";
 import LogIn from "./LogIn";
 import Contact from "./Pages/Contact";
+import Search from "./Search";
 
 function HomePage() {
   return (

@@ -14,12 +14,7 @@ export default function Ckre() {
   const [lior, setLior] = useState(-1);
   const [eveneven, seteveneven] = useState(false);
   const [objNum, setObjNum] = useState();
-  console.log(chose);
 
-  //   console.log(chose);
-  //   console.log(day);
-  //   console.log(starttime);
-  //   console.log(endtime);
   function name() {
     setLior(-1);
 
@@ -169,11 +164,7 @@ export default function Ckre() {
         <option value={13}>13:00</option>
         <option value={14}>14:00</option>
       </select>
-      <button id="semek" onClick={() => name()}>
-        Submit
-      </button>
-      {starttime} <br />
-      {endtime}
+      <button id="semek" onClick={() => name()}>Submit</button>
     </div>
   );
 }
