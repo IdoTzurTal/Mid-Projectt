@@ -20,6 +20,7 @@ import Search from "./Search";
 import HomeAfterLogin from "./HomeAfterLogin";
 import Context from "./Context";
 import Rooms from "./Rooms";
+import Admin from "./Admin";
 import Error from "./Error"
 
 
@@ -46,6 +47,7 @@ function App() {
         <Route path='/Meeting2' element={<Meeting2 />}></Route>
         <Route path='/Meeting3' element={<Meeting3 />}></Route>
         <Route path='/Rooms' element={<Rooms />}></Route>
+        <Route path='/Admin' element={<Admin />}></Route>
         <Route path='/*' element={<Error />}></Route>
       </Routes>
       </Context>
