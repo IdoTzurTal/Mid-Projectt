@@ -11,9 +11,10 @@ import Contact from "./Pages/Contact";
 import LogIn from "./LogIn";
 import About from "./Pages/About";
 import Rooms from "./Rooms";
-
+import { Detail } from "./Context";
 function Class() {
   // const value = useContext(CalendarApi)
+  const {rooms, setrooms} = useContext(Detail);
   return (
       <div>
       <div>
@@ -55,14 +56,12 @@ function Class() {
             <span id="classavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
             <span className="amenities">What this place offers</span>
               <ul className="amenitieslist">
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
+              <li>room number: {rooms[3].name}</li>
+                            <li>room type: {rooms[3].type}</li>
+                            <li>room capicity: {rooms[3].capicity}</li>
+                            <li>air condition? {rooms[3].aircondition}</li>
+                            <li>zoom? {rooms[3].zoom}</li>
+                            <li>board? {rooms[3].board}</li>
               </ul>          
           </div>
           <Ckre />

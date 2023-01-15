@@ -11,7 +11,7 @@ export default function LogIn() {
     e.preventDefault();
     if (user === "Admin" && password === "1234" && company === "cyberpro") {
       setuser(user);
-      // navigate("./main"); לעבור לדף הראשי
+      // navigate("."); לעבור לדף הראשי
     }
     else if (user === "Lecturer" && password === "1234" && company === "cyberpro") {
       setuser(user);

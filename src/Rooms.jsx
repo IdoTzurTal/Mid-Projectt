@@ -8,6 +8,7 @@ import HomePage from './HomePage'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import LogIn from './LogIn'
+import Search from './Search'
 
 
 function Rooms() {
@@ -86,7 +87,7 @@ function Rooms() {
                     alt="classroom img"
                 />
             </div>
-            <button id='roombutton'>FIND THE ROOM FOR YOU</button>
+           <button id='roombutton'><NavLink to='/Search' element={<Search/>} >FIND THE ROOM FOR YOU</NavLink> </button>
         </div>
     )
 }
