@@ -9,7 +9,8 @@ export default function Search() {
   const navigate = useNavigate();
 
   const [typecheck, settypechek] = useState();
- 
+  const {favorite,setfavorite} =useContext(Detail)
+
   const [fav, setfav] = useState([
     "not favorite",
     "not favorite",
@@ -68,11 +69,7 @@ export default function Search() {
   function Fun5(x) {
     const temp = [];
     for (let i = 0; rooms.length > i; i++) {
-      console.log("fun5 work");
-      console.log(rooms[i].type);
-      console.log(x);
-      if (rooms[i].type === x) {
-        
+      if (rooms[i].type === x) { 
         console.log(rooms[i]);
         temp.push(rooms[i]);
       }
@@ -184,6 +181,7 @@ export default function Search() {
       <button onClick={(e) => window.location.reload(false)}>Reset</button>
       {rooms.map((single, index) => {
         roomsingle.push(single.name);
+    
         return (
           <div>
             <p key={index}>
@@ -205,9 +203,8 @@ export default function Search() {
                   favChange(index, "favorite");
                   single.favorite == true
                     ? (single.favorite = false)
-                    : (single.favorite = true);
-                  console.log(single.favorite);
-                  console.log(rooms);
+                    : (single.favorite = true) && setfavorite([...favorite,{single}]) ;
+                    console.log(favorite);
                 }}
               >
                 {fav[index]}
@@ -215,6 +212,9 @@ export default function Search() {
               <button
                 onClick={(e) => {
                   navigatetospesific(roomsingle[index]);
+                  localStorage.setItem('favorite',JSON.stringify(favorite) );
+                  JSON.parse(favorite)
+                  console.log(favorite);
                 }}
               >
                 Select Room

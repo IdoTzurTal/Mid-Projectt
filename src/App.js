@@ -22,7 +22,7 @@ import Context from "./Context";
 import Rooms from "./Rooms";
 import Admin from "./Admin";
 import Error from "./Error"
-
+import Favoritepage from "./Favorite";
 function App() {
   // const CalendarApi = createContext()
 
@@ -47,6 +47,7 @@ function App() {
         <Route path='/Meeting3' element={<Meeting3 />}></Route>
         <Route path='/Rooms' element={<Rooms />}></Route>
         <Route path='/Admin' element={<Admin />}></Route>
+        <Route path='/Favoritepage' element={<Favoritepage />}></Route>
         <Route path='/*' element={<Error />}></Route>
       </Routes>
       </Context>

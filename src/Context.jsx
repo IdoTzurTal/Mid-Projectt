@@ -3,6 +3,7 @@ import { createContext, useState } from "react";
 export const Detail = createContext();
 
 function Context({children}) {
+  const [favorite,setfavorite] =useState([{}])
   const [rooms, setrooms] = useState([
     {
       name: "room 1",
@@ -99,7 +100,7 @@ function Context({children}) {
   const [meeting,setmeeting] =useState([]);
   
   return (
-    <Detail.Provider value={{ rooms, setrooms, meeting, setmeeting }}>{children}</Detail.Provider>
+    <Detail.Provider value={{ rooms, setrooms, meeting, setmeeting , favorite,setfavorite}}>{children}</Detail.Provider>
   );
 }
 
