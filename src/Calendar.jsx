@@ -1,7 +1,8 @@
 import "./Calendar.css";
 import Calendar from "react-calendar";
-import React, { useState } from "react";
+import React, { useState , useContext } from "react";
 import "react-calendar/dist/Calendar.css";
+import { Detail } from "./Context";
 
 export default function Ckre() {
   const [value, onChange] = useState(new Date());
@@ -14,7 +15,7 @@ export default function Ckre() {
   const [lior, setLior] = useState(-1);
   const [eveneven, seteveneven] = useState(false);
   const [objNum, setObjNum] = useState();
-
+  const {meeting, setmeeting} = useContext(Detail);
   function name() {
     setLior(-1);
 
@@ -65,18 +66,24 @@ export default function Ckre() {
           monthnum: chose?.toString()?.slice(8, 10),
           year: chose?.toString()?.slice(11, 15),
           selected: [...array],
-          eightnine: true,
-          nineten: true,
-          teneleven: true,
-          eleventwelve: true,
-          twelveone: true,
-          onetwo: true,
         },
       ]);
       console.log(array);
 
       setarray([]);
     }
+
+    setmeeting([
+      ...meeting,
+      {
+        id: chose?.toString()?.slice(0, 15),
+        day: chose?.toString()?.slice(0, 3),
+        month: chose?.toString()?.slice(4, 7),
+        monthnum: chose?.toString()?.slice(8, 10),
+        year: chose?.toString()?.slice(11, 15),
+        selected: [...array],
+    }])
+    console.log(meeting , "hello");
   }
 
   const handleClick = (e) => {

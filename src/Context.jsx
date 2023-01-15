@@ -96,9 +96,10 @@ function Context({children}) {
       favorite: false,
     },
   ]);
-
+  const [meeting,setmeeting] =useState([]);
+  
   return (
-    <Detail.Provider value={{ rooms, setrooms }}>{children}</Detail.Provider>
+    <Detail.Provider value={{ rooms, setrooms, meeting, setmeeting }}>{children}</Detail.Provider>
   );
 }
 
