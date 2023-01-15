@@ -56,12 +56,12 @@ function Class() {
             <span id="classavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
             <span className="amenities">What this place offers</span>
               <ul className="amenitieslist">
-              <li>room number: {rooms[3].name}</li>
-                            <li>room type: {rooms[3].type}</li>
-                            <li>room capicity: {rooms[3].capicity}</li>
-                            <li>air condition? {rooms[3].aircondition}</li>
-                            <li>zoom? {rooms[3].zoom}</li>
-                            <li>board? {rooms[3].board}</li>
+              <li>Room Number: {rooms[3].name}</li>
+                            <li>Room Type: {rooms[3].type}</li>
+                            <li>Room Capacity: {rooms[3].capacity}</li>
+                            <li>Air Conditioning? {rooms[3].airconditioning}</li>
+                            <li>Zoom? {rooms[3].zoom}</li>
+                            <li>Whiteboard? {rooms[3].whiteboard}</li>
               </ul>          
           </div>
           <Ckre />

@@ -60,12 +60,12 @@ function Lecture2() {
                         <span id="lectureavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
                         <span className="amenities">What this place offers</span>
                         <ul className="amenitieslist">
-                        <li>room number: {rooms[1].name}</li>
-                            <li>room type: {rooms[1].type}</li>
-                            <li>room capicity: {rooms[1].capicity}</li>
-                            <li>air condition? {rooms[1].aircondition}</li>
-                            <li>zoom? {rooms[1].zoom}</li>
-                            <li>board? {rooms[1].board}</li>
+                        <li>Room Number: {rooms[1].name}</li>
+                            <li>Room Type: {rooms[1].type}</li>
+                            <li>Room Capacity: {rooms[1].capacity}</li>
+                            <li>Air Conditioning? {rooms[1].airconditioning}</li>
+                            <li>Zoom? {rooms[1].zoom}</li>
+                            <li>Whiteboard? {rooms[1].whiteboard}</li>
                         </ul>
                     </div>
                     <Ckre />

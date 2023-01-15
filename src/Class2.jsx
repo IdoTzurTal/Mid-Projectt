@@ -60,12 +60,12 @@ function Class2() {
             <span id="classavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
             <span className="amenities">What this place offers</span>
               <ul className="amenitieslist">
-              <li>room number: {rooms[4].name}</li>
-                            <li>room type: {rooms[4].type}</li>
-                            <li>room capicity: {rooms[4].capicity}</li>
-                            <li>air condition? {rooms[4].aircondition}</li>
-                            <li>zoom? {rooms[4].zoom}</li>
-                            <li>board? {rooms[4].board}</li>
+              <li>Room Number: {rooms[4].name}</li>
+                            <li>Room Type: {rooms[4].type}</li>
+                            <li>Room Capacity: {rooms[4].capacity}</li>
+                            <li>Air Conditioning? {rooms[4].airconditioning}</li>
+                            <li>Zoom? {rooms[4].zoom}</li>
+                            <li>Board? {rooms[4].whiteboard}</li>
               </ul>          
           </div>
           <Ckre />

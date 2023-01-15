@@ -60,12 +60,12 @@ function Meeting() {
                         <span id="meetingavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
                         <span className="amenities">What this place offers</span>
                         <ul className="amenitieslist">
-                        <li>room number: {rooms[6].name}</li>
-                            <li>room type: {rooms[6].type}</li>
-                            <li>room capicity: {rooms[6].capicity}</li>
-                            <li>air condition? {rooms[6].aircondition}</li>
-                            <li>zoom? {rooms[6].zoom}</li>
-                            <li>board? {rooms[6].board}</li>
+                        <li>Room Number: {rooms[6].name}</li>
+                            <li>Room Type: {rooms[6].type}</li>
+                            <li>Room Capacity: {rooms[6].capacity}</li>
+                            <li>Air Conditioning? {rooms[6].airconditioning}</li>
+                            <li>Zoom? {rooms[6].zoom}</li>
+                            <li>Whiteboard? {rooms[6].whiteboard}</li>
                         </ul>
                     </div>
                     <Ckre />
