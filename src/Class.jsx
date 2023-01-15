@@ -1,4 +1,4 @@
-// import "./Class.css";
+import "./Class.css";
 import * as React from "react";
 // import Calendar from '../src/Calendar'
 import { useState } from "react";
@@ -12,7 +12,6 @@ import LogIn from "./LogIn";
 import About from "./Pages/About";
 import Lecture from "./Lecture";
 import Meeting from "./Meeting";
-
 
 function Class() {
   // const value = useContext(CalendarApi)

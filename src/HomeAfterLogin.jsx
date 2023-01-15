@@ -45,7 +45,11 @@ function HomeAfterLogin() {
         </div>
         <div id="info">
           <p>
-          CYBERPRO Global is a world-class cyber education and training provider. We’ll support you in every stage of the process, from selecting the proper training program, to customizing it to fit your organization’s needs, and finally to facilitating the training in a unique and hands-on environment.
+            CYBERPRO Global is a world-class cyber education and training
+            provider. We’ll support you in every stage of the process, from
+            selecting the proper training program, to customizing it to fit your
+            organization’s needs, and finally to facilitating the training in a
+            unique and hands-on environment.
           </p>
         </div>
       </div>

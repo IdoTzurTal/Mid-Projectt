@@ -6,8 +6,22 @@ import { Box } from "@mui/system"
 import HomePage from "../HomePage"
 import Tabs from "@mui/material/Tabs";
 import '../Pages/Contact.css'
+import { useState } from "react";
 
 function Contact() {
+  const [request, setRequest] = useState();
+  const [userRequest, setUserRequest] = useState();
+  const [detail, setDetail] = useState();
+  const [requests, setRequests] = useState([]);
+  
+   function handleSubmit(e) {
+    e.preventDefault();
+    setRequests([
+      ...requests,
+      { tag: request, userName: userRequest, details: detail },
+    ]);
+    console.log(requests);
+  }
     return (
         <div>
         <div>
@@ -36,12 +50,32 @@ function Contact() {
                         (+1) 555 3215 (Free international calls!)
                 </p>
                 {/* להוסיף אופציה לשליחת מייל עם ספריית mail.js */}
-
             </div>
-
-        </div>
-        </div>
-    )
+        <form onSubmit={handleSubmit}>
+          <select
+            name="company"
+            id="company"
+            onChange={(e) => setRequest(e.target.value)}
+          >
+            <option value="selectreasson">select reasson</option>
+            <option value="callit">call it</option>
+            <option value="meetingroom">meeting room</option>
+          </select>
+          <input
+            type="text"
+            placeholder="user name"
+            onChange={(e) => setUserRequest(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Detail"
+            onChange={(e) => setDetail(e.target.value)}
+          />
+          <input type="submit" value={"log in"} />
+        </form>
+      </div>
+    </div>
+  );
 }
 
-export default Contact
+export default Contact;

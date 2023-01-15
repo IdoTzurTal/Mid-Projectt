@@ -21,7 +21,6 @@ function HomePage() {
           <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
           <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
           <NavLink to='/Login' element={<LogIn/>}> <Tab label="log in" /></NavLink>
-          
         </Tabs>
       </Box>
       <div id="mainhomeimg"></div>
