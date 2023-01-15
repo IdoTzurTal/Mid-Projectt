@@ -48,3 +48,13 @@
     left: 20%;
     text-shadow: 1px 1px 5px  black;
 }
+@media screen and (max-width: 412px) {
+    #officecomms {
+    position: relative;
+    z-index: 1;
+    width: 358vw;
+    opacity: 58%;
+    right: 116%;
+    }
+  }
+  /* לא הבנתי למה זה לא עבד כוסעמק */

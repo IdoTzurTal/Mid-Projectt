@@ -1,13 +1,15 @@
-.calendar {
+.calendarcontainerincalendarpage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    left: 59%;
-    top: 106%;
+    width: fit-content;
+}
+.calendarincalendarpage {
+    display: flex;
+    align-items: center;
 
 }
-.calendar>*{
+.calendarincalendarpage>*{
     margin: 4%;
 }
 .calendar select{

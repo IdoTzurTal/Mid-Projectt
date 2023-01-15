@@ -31,8 +31,8 @@ function Meeting() {
                     </Tabs>
                 </Box>
             </div>
-            <div id="fleximgdescription">
-                <div id="classinfo">
+            <div id="fleximgdescriptionmeeting">
+                <div id="meetinginfo">
                     <div>
                         <h2>Yellowstone Meeting Room</h2>
                     </div>
@@ -40,29 +40,31 @@ function Meeting() {
                         <p>Top of the line, fully equipped meeting room</p>
                     </div>
                 </div>
-                <div id="classimg">
-                    <img
-                        src="weworkmeetingroom.png"
-                        alt="classroom img"
-                    />
-                </div>
             </div>
-            <div>
-                <div className="calendar">
-                    <div>
-                        <Ckre />
+            <div id="meetingimg">
+                <span id="officeinfomeeting">
+                    Good for small and large groups.<br />
+                    High-speed Internet and conference A/V tools.<br />
+                    For all meeting types: private, business and executive.<br />
+                    Enjoy shared amenities and business essentials.
+                </span>
+                <img
+                    src="weworkmeetingroom.png"
+                    alt="classroom img"
+                />
+            </div>
+
+            <div className="calendarcontainerinmeetingpage">
+                <div id="calendarinmeetingpage">
+                    <div id="meetingavailabilitycontainer">
+                        <span id="meetingavailability">Check availability now!</span>
+                        <span id="meetingavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
                     </div>
+                    <Ckre />
                 </div>
             </div>
-            <span id="officeinfo">
-                Good for small and large groups.<br/>
-                High-speed Internet and conference A/V tools.<br/>
-                For all meeting types: private, business and executive.<br/>
-                Enjoy shared amenities and business essentials.
-            </span>
-            <span id="availability">Check availability now!</span>
-            <span id="availabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
-            <div id="cancellation">
+
+            <div id="meetingcancellation">
                 <h3>Cancellation rules and company policy</h3>
                 <ul>
                     <li>

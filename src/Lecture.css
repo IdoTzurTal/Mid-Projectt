@@ -1,63 +1,89 @@
-#fleximgdescription {
-    display: flex;
-    /* justify-content: space-between; */
-    justify-content: space-around;
-  }
-  
-  #classimg img {
-    object-fit: fill;
-    height: auto;
-    width: 45vw;
-    position: absolute;
-    z-index: 2;
-    right: 6%;
-    top: 18%;
-  }
-  
-  #classinfo {
-    text-align: left;
-    position: relative;
-    right: 11%;
-    font-size: xx-large;
-    font-family: sans-serif;
-  }
-  
-  #officeinfo {
-    position: absolute;
-    right: 56%;
-    bottom: 68%;
-    width: 40%;
-    text-align: left;
-    font-size: x-large;
-    top: 48%;
-    font-style: italic;
-  }
-  
-  h3 {
-    text-align: start;
-  }
-  
-  li {
-    list-style-type: none;
-    text-align: start;
-  }
-  
-  #cancellation {
-    position: absolute;
-    top: 200%;
-    left: 9%;
-    font-size: large;
-  }
-  
-  #availability {
-    position: absolute;
-    top: 130%;
-    font-size: xxx-large;
-    right: 60%;
-  }
-  #availabilitydescription{
-    position: absolute;
-    right: 55%;
-    top: 140%;
-    font-style: italic;
-  }
+#fleximgdescriptionlecture {
+  display: flex;
+  justify-content: space-around;
+  height: 9vh;
+}
+
+#lectureimg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#lectureimg img {
+  object-fit: fill;
+  height: auto;
+  width: 45vw;
+  padding-top: 4vh;
+  padding-left: 4vw;
+}
+
+#lectureinfo {
+  text-align: left;
+  font-size: xx-large;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding-right: 46vw;
+}
+
+#officeinfolecture {
+  width: 40%;
+  text-align: left;
+  font-size: x-large;
+  display: flex;
+  padding-left: 5vw;
+  font-style: italic;
+}
+
+h3 {
+  text-align: start;
+}
+
+li {
+  list-style-type: none;
+  text-align: start;
+}
+
+#lecturecancellation {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  padding-left: 8vw;
+  padding-top: 14vh;
+}
+
+#lectureavailability {
+  font-size: xxx-large;
+}
+
+#lectureavailabilitydescription {
+  font-style: italic;
+}
+
+#lectureavailabilitycontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 22vh;
+  padding-right: 13vw;
+}
+
+.calendarcontainerinlecturepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 5vw;
+}
+
+#calendarinlecturepage {
+  display: flex;
+  justify-content: center;
+  padding-right: 7vw;
+  padding-top: 6vh;
+}
+
+#calendarinlecturepage select {
+  padding: 3%;
+  margin: 3%;
+}

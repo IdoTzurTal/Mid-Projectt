@@ -112,8 +112,8 @@ export default function Ckre() {
   };
 
   return (
-    <div className="calendar">
-      <div>
+    <div className="calendarcontainerincalendarpage">
+      <div id="calendarincalendarpage">
         <Calendar
           onChange={onChange}
           value={value}
