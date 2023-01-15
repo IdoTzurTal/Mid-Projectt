@@ -25,7 +25,7 @@ export default function Search() {
   function Fun() {
     const temp = [];
     for (let i = 0; rooms.length > i; i++) {
-      if (rooms[i].porjector === "yes") {
+      if (rooms[i].projector === "yes") {
         console.log(rooms[i]);
         temp.push(rooms[i]);
       }
@@ -35,7 +35,7 @@ export default function Search() {
   function Fun2() {
     const temp = [];
     for (let i = 0; rooms.length > i; i++) {
-      if (rooms[i].aircondition === "yes") {
+      if (rooms[i].airconditioning === "yes") {
         console.log(rooms[i]);
         temp.push(rooms[i]);
       }
@@ -77,7 +77,7 @@ export default function Search() {
   function Fun6(x) {
     const temp = [];
     for (let i = 0; rooms.length > i; i++) {
-      if (rooms[i].capicity >= x) {
+      if (rooms[i].capacity >= x) {
         console.log(rooms[i]);
         temp.push(rooms[i]);
       }
@@ -102,13 +102,13 @@ export default function Search() {
       <h1>Our Rooms</h1>
       <select name="roomtype" onChange={(e) => Fun5(e.target.value)}>
         <option value="">select room type</option>
-        <option value="conferenceHall">conferenceHall</option>
-        <option value="meetroom">meetroom</option>
-        <option value="classes">classes</option>
+        <option value="lectureHall">conferenceHall</option>
+        <option value="meetingroom">meetroom</option>
+        <option value="classroom">classes</option>
       </select>
       <input
         type="number"
-        placeholder="capicty"
+        placeholder="capacity"
         onChange={(e) => Fun6(e.target.value)}
       />
       board
@@ -118,13 +118,13 @@ export default function Search() {
       air condition
       <input
         type="checkbox"
-        value={"aircondition"}
+        value={"airconditioning"}
         onChange={(e) => Fun2(e, "yes")}
       />
       projector
       <input
         type="checkbox"
-        value={"porjector"}
+        value={"projector"}
         onChange={(e) => Fun(e, "yes")}
       />
       <button onClick={(e) => window.location.reload(false)}>reset</button>
@@ -137,12 +137,12 @@ export default function Search() {
               <br />
               type: {single.type}
               <br />
-              capicity:{single.capicity}
+              capicity:{single.capacity}
               <br />
               zoom: {single.zoom}
               <br />
-              aircondition: {single.aircondition} <br />
-              porjector: {single.porjector} <br />
+              aircondition: {single.airconditioning} <br />
+              porjector: {single.projector} <br />
               board: {single.board}
               <br />
               <br />
