@@ -11,7 +11,7 @@ import Contact from "./Pages/Contact";
 import LogIn from "./LogIn";
 import About from "./Pages/About";
 import Class from "./Class";
-import Lecture from "./Lecture";
+import Rooms from "./Rooms";
 
 
 function Meeting() {
@@ -22,9 +22,7 @@ function Meeting() {
                 <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
                     <Tabs className="contactnav" centered>
                         <NavLink to='/Home' element={<HomePage />} > <Tab label="cyber pro" /></NavLink>
-                        <NavLink to='/Meetingroom' element={<Meeting />}> <Tab label="meeting rooms" /></NavLink>
-                        <NavLink to='/Lectureroom' element={<Lecture />}> <Tab label="lecture rooms" /></NavLink>
-                        <NavLink to='/Classroom' element={<Class />}> <Tab label="classrooms" /></NavLink>
+                        <NavLink to='/Rooms' element={<Rooms />}> <Tab label="Rooms" /></NavLink>
                         <NavLink to='/About' element={<About />} > <Tab label="about" /></NavLink>
                         <NavLink to='/Contact' element={<Contact />} > <Tab label="contact" /></NavLink>
                         <NavLink to='/Login' element={<LogIn />}> <Tab label="log in" /></NavLink>
@@ -59,11 +57,21 @@ function Meeting() {
                     <div id="meetingavailabilitycontainer">
                         <span id="meetingavailability">Check availability now!</span>
                         <span id="meetingavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
+                        <span className="amenities">What this place offers</span>
+                        <ul className="amenitieslist">
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                            <li>item</li>
+                        </ul>
                     </div>
                     <Ckre />
                 </div>
             </div>
-
             <div id="meetingcancellation">
                 <h3>Cancellation rules and company policy</h3>
                 <ul>

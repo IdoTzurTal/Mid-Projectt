@@ -7,6 +7,8 @@ import HomePage from "../HomePage"
 import Tabs from "@mui/material/Tabs";
 import '../Pages/Contact.css'
 import { useState } from "react";
+import '../Pages/Contact.css'
+import Rooms from "../Rooms"
 
 function Contact() {
   const [request, setRequest] = useState();
@@ -28,9 +30,7 @@ function Contact() {
         <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
         <Tabs className="contactnav" centered>
           <NavLink to='/Home' element={<HomePage/>} > <Tab label="cyber pro" /></NavLink>
-          <NavLink> <Tab label="meeting rooms" /></NavLink>
-          <NavLink> <Tab label="lecture rooms" /></NavLink>
-          <NavLink> <Tab label="classrooms" /></NavLink>
+          <NavLink to='/Rooms' element={<Rooms />}> <Tab label="Rooms" /></NavLink>
           <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
           <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
           <NavLink to='/Login' element={<LogIn/>}> <Tab label="log in" /></NavLink>
