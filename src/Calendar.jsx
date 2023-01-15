@@ -43,8 +43,8 @@ export default function Ckre() {
       if (x === 2) {
         alert("error");
       } else {
-        for (let index = Number(starttime); index < Number(endtime); index++) {
-          day[objNum].selected.push(y);
+        for (let d = 0; d < y.length; d++) {
+          day[objNum].selected.push(y[d]);
         }
         x = 4;
       }
