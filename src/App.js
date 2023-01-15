@@ -20,7 +20,8 @@ import Search from "./Search";
 import HomeAfterLogin from "./HomeAfterLogin";
 import Context from "./Context";
 import Rooms from "./Rooms";
-import Error from "./Error";
+import Admin from "./Admin";
+import Error from "./Error"
 
 function App() {
   // const CalendarApi = createContext()
@@ -28,25 +29,26 @@ function App() {
   return (
     <div className="App">
       <Context>
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/Home" element={<HomePage />}></Route>
-          <Route path="/Login" element={<Login />}></Route>
-          <Route path="/About" element={<About />}></Route>
-          <Route path="/Contact" element={<Contact />}></Route>
-          <Route path="/Classroom" element={<Class />}></Route>
-          <Route path="/Lectureroom" element={<Lecture />}></Route>
-          <Route path="/Meetingroom" element={<Meeting />}></Route>
-          <Route path="/Search" element={<Search />}></Route>
-          <Route path="/Class2" element={<Class2 />}></Route>
-          <Route path="/Class3" element={<Class3 />}></Route>
-          <Route path="/Lecture2" element={<Lecture2 />}></Route>
-          <Route path="/Lecture3" element={<Lecture3 />}></Route>
-          <Route path="/Meeting2" element={<Meeting2 />}></Route>
-          <Route path="/Meeting3" element={<Meeting3 />}></Route>
-          <Route path="/Rooms" element={<Rooms />}></Route>
-          <Route path="/*" element={<Error />}></Route>
-        </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/Home" element={<HomePage />}></Route>
+        <Route path="/Login" element={<Login />}></Route>
+        <Route path='/About' element={<About />}></Route>
+        <Route path='/Contact' element={<Contact />}></Route>
+        <Route path='/Classroom' element={<Class />}></Route>
+        <Route path='/Lectureroom' element={<Lecture />}></Route>
+        <Route path='/Meetingroom' element={<Meeting/>}></Route>
+        <Route path='/Search' element={<Search/>}></Route> 
+        <Route path='/Class2' element={<Class2 />}></Route>
+        <Route path='/Class3' element={<Class3 />}></Route>     
+        <Route path='/Lecture2' element={<Lecture2 />}></Route>
+        <Route path='/Lecture3' element={<Lecture3 />}></Route>
+        <Route path='/Meeting2' element={<Meeting2 />}></Route>
+        <Route path='/Meeting3' element={<Meeting3 />}></Route>
+        <Route path='/Rooms' element={<Rooms />}></Route>
+        <Route path='/Admin' element={<Admin />}></Route>
+        <Route path='/*' element={<Error />}></Route>
+      </Routes>
       </Context>
     </div>
   );
