@@ -1,14 +1,14 @@
 import "./App.css";
 import HomePage from "./HomePage";
 import Login from "./LogIn";
-import './App.css';
-import About from './Pages/About'
-import Contact from './Pages/Contact'
-import { Route, Routes } from 'react-router-dom';
+import "./App.css";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import { Route, Routes } from "react-router-dom";
 import { createContext } from "react";
 import Class from "./Class";
-import Class2 from './Class2';
-import Class3 from './Class3';
+import Class2 from "./Class2";
+import Class3 from "./Class3";
 import Lecture from "./Lecture";
 import Lecture2 from "./Lecture2";
 import Lecture3 from "./Lecture3";
@@ -22,7 +22,6 @@ import Context from "./Context";
 import Rooms from "./Rooms";
 import Admin from "./Admin";
 import Error from "./Error"
-
 
 function App() {
   // const CalendarApi = createContext()
