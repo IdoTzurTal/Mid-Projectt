@@ -115,9 +115,6 @@ function HomePage() {
           </div>
         }} */}
       </div>
-      <NavLink to="/Rooms" element={<Rooms />}>
-        <button></button>
-      </NavLink>
       <div id="flexendhome">
         <div id="flexicons">
           <a href="https://he-il.facebook.com/" target="_blank">
