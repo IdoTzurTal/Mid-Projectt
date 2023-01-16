@@ -2,18 +2,19 @@
   text-decoration: none;
   color: white;
 }
+
 .homebnav {
   background-color: rgb(37, 29, 29);
   width: 100vw;
 }
 
 #mainhomeimg {
-  min-height: 800px;
+  min-height: 667px;
   width: 100vw;
   background-image: url("http://netpes.net/lior/pic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: bottom;
+  background-position: center;
 }
 
 #flexendhome {
@@ -35,4 +36,27 @@
   width: 100px;
   height: 50px;
   color: rgb(3, 3, 3);
+}
+
+@media screen and (max-width: 412px) {
+  #mainhomeimg {
+    min-height: 667px;
+    width: 100vw;
+    background-image: url(http://netpes.net/lior/pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #flexicons {
+    display: flex;
+    align-items: flex-start;
+    width: 50vw;
+    flex-direction: column;
+    padding-top: 3vh;
+  }
+  #info {
+    width: 123vw;
+    padding-right: 5vw;
+  }
 }

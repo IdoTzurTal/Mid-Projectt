@@ -61,8 +61,8 @@ function Lecture3() {
           </Tabs>
         </Box>
         </div>
-            <div id="fleximgdescriptionlecture">
-                <div id="lectureinfo">
+            <div id="fleximgdescriptionlecture3">
+                <div id="lecture3info">
                     <div>
                         <h2>Sequoia Lecture Hall</h2>
                     </div>
@@ -71,8 +71,8 @@ function Lecture3() {
                     </div>
                 </div>
             </div>
-            <div id="lectureimg">
-                <span id="officeinfolecture">
+            <div id="lecture3img">
+                <span id="officeinfolecture3">
                     The architectural design of 360 degree lecture hall is a flipped traditional lecture hall with a circular shape.<br />
                     Students seating stations are in a perfect circle regardless of which type of furniture is used in new hall.<br />
                     The teacher’s place is in the middle rather than at front.
@@ -82,13 +82,13 @@ function Lecture3() {
                     alt="classroom img"
                 />
             </div>
-            <div className="calendarcontainerinlecturepage">
-                <div id="calendarinlecturepage">
-                    <div id="lectureavailabilitycontainer">
-                        <span id="lectureavailability">Check availability now!</span>
-                        <span id="lectureavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
-                        <span className="amenities">What this place offers</span>
-                        <ul className="amenitieslist">
+            <div className="calendarcontainerinlecture3page">
+                <div id="calendarinlecture3page">
+                    <div id="lecture3availabilitycontainer">
+                        <span id="lecture3availability">Check availability now!</span>
+                        <span id="lecture3availabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
+                        <span className="amenitieslecture3">What this place offers</span>
+                        <ul className="amenitieslistlecture3">
                         <li>Room Number: {rooms[2].name}</li>
                             <li>Room Type: {rooms[2].type}</li>
                             <li>Room Capacity: {rooms[2].capacity}</li>
@@ -102,7 +102,7 @@ function Lecture3() {
             </div>
 
 
-            <div id="lecturecancellation">
+            <div id="lecture3cancellation">
                 <h3>Cancellation rules and company policy</h3>
                 <ul>
                     <li>

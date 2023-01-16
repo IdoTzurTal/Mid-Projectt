@@ -87,8 +87,8 @@ function Lecture() {
                     <div id="lectureavailabilitycontainer">
                         <span id="lectureavailability">Check availability now!</span>
                         <span id="lectureavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
-                        <span className="amenities">What this place offers</span>
-                        <ul className="amenitieslist">
+                        <span className="amenitieslecture">What this place offers</span>
+                        <ul className="amenitieslistlecture">
                             <li>Room Number: {rooms[0].name}</li>
                             <li>Room Type: {rooms[0].type}</li>
                             <li>Room Capacity: {rooms[0].capacity}</li>

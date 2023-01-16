@@ -61,8 +61,8 @@ function Meeting3() {
           </Tabs>
         </Box>
         </div>
-            <div id="fleximgdescriptionmeeting">
-                <div id="meetinginfo">
+            <div id="fleximgdescriptionmeeting3">
+                <div id="meeting3info">
                     <div>
                         <h2>Yellowstone Meeting Room</h2>
                     </div>
@@ -71,8 +71,8 @@ function Meeting3() {
                     </div>
                 </div>
             </div>
-            <div id="meetingimg">
-                <span id="officeinfomeeting">
+            <div id="meeting3img">
+                <span id="officeinfomeeting3">
                     Good for small and large groups.<br />
                     High-speed Internet and conference A/V tools.<br />
                     For all meeting types: private, business and executive.<br />
@@ -84,13 +84,13 @@ function Meeting3() {
                 />
             </div>
 
-            <div className="calendarcontainerinmeetingpage">
-                <div id="calendarinmeetingpage">
-                    <div id="meetingavailabilitycontainer">
-                        <span id="meetingavailability">Check availability now!</span>
-                        <span id="meetingavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
-                        <span className="amenities">What this place offers</span>
-                        <ul className="amenitieslist">
+            <div className="calendarcontainerinmeeting3page">
+                <div id="calendarinmeeting3page">
+                    <div id="meeting3availabilitycontainer">
+                        <span id="meeting3availability">Check availability now!</span>
+                        <span id="meeting3availabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
+                        <span className="amenitiesmeeting3">What this place offers</span>
+                        <ul className="amenitieslistmeeting3">
                         <li>Room Number: {rooms[8].name}</li>
                             <li>Room Type: {rooms[8].type}</li>
                             <li>Room Capacity: {rooms[8].capacity}</li>
@@ -103,7 +103,7 @@ function Meeting3() {
                 </div>
             </div>
 
-            <div id="meetingcancellation">
+            <div id="meeting3cancellation">
                 <h3>Cancellation rules and company policy</h3>
                 <ul>
                     <li>

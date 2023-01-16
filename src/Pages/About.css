@@ -2,6 +2,7 @@
     text-decoration: none;
     color: white;
 }
+
 .aboutnav {
     background-color: rgb(37, 29, 29);
     width: 100vw;
@@ -12,7 +13,6 @@
     width: 70vw;
     display: flex;
     justify-content: space-around;
-    z-index: 2;
     margin: 0;
 }
 
@@ -26,20 +26,53 @@
     font-style: italic;
     font-family: system-ui;
     font-size: larger;
-    padding-left: 3vw;
+    font-weight: 600;
+    padding-left: 12vw;
     z-index: 2;
-    width: 40vw;
-    position: absolute;
-    left: 28%;
-    top: 22%;
+    width: 47vw;
     text-align: left;
-    text-shadow: 1px 1px 5px  black;
+    text-shadow: 1px 1px 5px white;
+    padding-top: 14vh;
 }
 
 #officeimg {
     margin: 0px;
     width: 100vw;
-    position: relative;
-    right: 125%;
     opacity: 58%;
+}
+
+.abuyacontain {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+@media screen and (max-width: 412px) {
+    #officeimg {
+        margin: 0px;
+        width: 331vw;
+        opacity: 58%;
+    }
+
+    #officeworks {
+        font-style: italic;
+        font-family: system-ui;
+        font-size: medium;
+        font-weight: 600;
+        padding-left: 4vw;
+        z-index: 2;
+        width: 51vw;
+        text-align: left;
+        text-shadow: 1px 1px 5px white;
+        padding-top: 5vh;
+        padding-left: 6vw;
+    }
+
+    .container {
+        height: 50vh;
+        width: 77vw;
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+    }
 }

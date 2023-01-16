@@ -60,7 +60,7 @@ function Class() {
         </Box>
         </div>
       <div id="fleximgdescriptionclass">
-        <div id="classinfo">
+        <div id="classinfoclass">
           <div>
             <h2>Yosemite Classroom</h2>
           </div>
@@ -69,7 +69,7 @@ function Class() {
           </div>
         </div>
       </div>
-      <div id="classimg">
+      <div id="classimgclass">
         <span id="officeinfoclass">
           Elevated, move-in ready private workspace for teams of 20 or more.<br />
           Private amenities can include interior offices, meeting rooms, lounges, pantries.<br /> and more
@@ -85,8 +85,8 @@ function Class() {
           <div id="classavailabilitycontainer">
             <span id="classavailability">Check availability now!</span>
             <span id="classavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
-            <span className="amenities">What this place offers</span>
-              <ul className="amenitieslist">
+            <span className="amenitiesclass">What this place offers</span>
+              <ul className="amenitieslistclass">
               <li>Room Number: {rooms[3].name}</li>
                             <li>Room Type: {rooms[3].type}</li>
                             <li>Room Capacity: {rooms[3].capacity}</li>

@@ -10,7 +10,7 @@ import Rooms from "../Rooms"
 
 function About() {
     return (
-        <div>
+        <div className="abuyacontain">
         <div>
         <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
         <Tabs className="aboutnav" centered>
