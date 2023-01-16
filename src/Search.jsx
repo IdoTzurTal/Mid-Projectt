@@ -25,10 +25,9 @@ import { useEffect } from "react";
 import Rooms from "./Rooms";
 import './Search.css'
 
-
 export default function Search() {
   const navigate = useNavigate();
-
+  const { roomid, setroomid } = useContext(Detail);
   const [typecheck, settypechek] = useState();
   const {favorite,setfavorite} =useContext(Detail)
 
@@ -124,40 +123,49 @@ export default function Search() {
   function navigatetospesific(roomsingle) {
     switch (roomsingle) {
       case "room 1":
+        setroomid(0);
         console.log("room1");
         navigate("/Lectureroom");
         break;
 
       case "room 2":
+        setroomid(1);
         console.log("room2");
         navigate("/Lecture2");
         break;
 
       case "room 3":
+        setroomid(2);
         console.log("room3");
         navigate("/Lecture3");
         break;
       case "room 4":
+        setroomid(3);
         console.log("room4");
         navigate("/Classroom");
         break;
       case "room 5":
+        setroomid(4);
         console.log("room5");
         navigate("/Class2");
         break;
       case "room 6":
+        setroomid(5);
         console.log("room6");
         navigate("/Class3");
         break;
       case "room 7":
+        setroomid(6);
         console.log("room7");
         navigate("/Meetingroom");
         break;
       case "room 8":
+        setroomid(7);
         console.log("room8");
         navigate("/Meeting2");
         break;
       case "room 9":
+        setroomid(8);
         console.log("room9");
         navigate("/Meeting3");
         break;
@@ -237,7 +245,6 @@ export default function Search() {
       <button onClick={(e) => window.location.reload(false)}>Reset</button>
       {rooms.map((single, index) => {
         roomsingle.push(single.name);
-    
         return (
           <div className="buyasearch">
             <p key={index}>

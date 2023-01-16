@@ -12,9 +12,12 @@ import Search from './Search'
 import HomeAfterLogin from './HomeAfterLogin'
 import Favoritepage from './Favorite'
 import Admin from './Admin'
+import { Detail } from "./Context";
 
 
 function Rooms() {
+  const { rooms, setrooms } = useContext(Detail);
+  const { roomid, setroomid } = useContext(Detail);
     return (
         <div>
         <div>
@@ -119,7 +122,26 @@ function Rooms() {
             </div>
            <button id='roombutton'><NavLink to='/Search' element={<Search/>} >FIND THE ROOM FOR YOU</NavLink> </button>
         </div>
-    )
+      </div>
+      <div id="meetingimg">
+        <span id="officeinfomeeting">
+          Good for small and large groups.
+          <br />
+          High-speed Internet and conference A/V tools.
+          <br />
+          For all meeting types: private, business and executive.
+          <br />
+          Enjoy shared amenities and business essentials.
+        </span>
+        <img src="weworkmeetingroom.png" alt="classroom img" />
+      </div>
+      <button id="roombutton">
+        <NavLink to="/Search" element={<Search />}>
+          FIND THE ROOM FOR YOU
+        </NavLink>{" "}
+      </button>
+    </div>
+  );
 }
 
-export default Rooms
+export default Rooms;
