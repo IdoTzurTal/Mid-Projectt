@@ -18,18 +18,12 @@ export default function Ckre() {
   const { meeting, setmeeting } = useContext(Detail);
   const { rooms, setrooms } = useContext(Detail);
   const { roomid, setroomid } = useContext(Detail);
-  //   for(let b=0;b<rooms[roomid]?.day2.length;b++){
-  //   setDay(...day,rooms[roomid]?.day2[b]);
-  // }
-  // if (rooms[roomid]?.day2.length > 1) {
-  // for (let i = 0; i < 7; i++) {
-  //   day.push(rooms[roomid]?.day2[i]);
-  // }
-  // }
+
   useEffect(() => {
     console.log("useeffect", rooms[roomid]);
     console.log("useeffect", rooms[roomid]?.day2);
     console.log(day);
+
     rooms[roomid]?.day2.shift(day);
     rooms[roomid]?.day2.push(day);
 
