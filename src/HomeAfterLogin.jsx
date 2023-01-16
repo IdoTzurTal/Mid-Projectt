@@ -10,8 +10,8 @@ import { NavLink } from "react-router-dom";
 import Meeting from "./Meeting";
 import Class from "./Class";
 import Lecture from "./Lecture";
-import Contact from "./Pages/Contact";
-import About from "./Pages/About";
+import AboutAfterLogin from "./AboutAfterLogin"
+import ContactAfterLogin from "./ContactAfterLogin"
 import HomePage from "./HomePage";
 import Search from "./Search";
 import Favoritepage from "./Favorite";
@@ -27,8 +27,9 @@ function HomeAfterLogin() {
 // useEffect(() => {
   return (
     <div>
+        <div>
         <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-          <Tabs className="hometabs" centered>
+          <Tabs className="contactnav" centered>
             <NavLink to="/HomeAfterLogin" element={<HomeAfterLogin />}>
               {" "}
               <Tab label="Home" />
@@ -37,11 +38,11 @@ function HomeAfterLogin() {
               {" "}
               <Tab label="our rooms" />
             </NavLink>
-            <NavLink to="/About" element={<About />}>
+            <NavLink to="/Aboutafterlogin" element={<AboutAfterLogin />}>
               {" "}
               <Tab label="about" />
             </NavLink>
-            <NavLink to="/Contact" element={<Contact />}>
+            <NavLink to="/Contactafterlogin" element={<ContactAfterLogin />}>
               {" "}
               <Tab label="contact" />
             </NavLink>
@@ -61,6 +62,7 @@ function HomeAfterLogin() {
             {/* )} */}
           </Tabs>
         </Box>
+        </div>
       <div id="mainhomeimg"></div>
       <div></div>
       <div id="flexendhome">
