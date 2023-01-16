@@ -6,19 +6,19 @@
   background-color: rgb(37, 29, 29);
   width: 100vw;
 }
-#fleximgdescriptionmeeting {
+#fleximgdescriptionmeeting3 {
   display: flex;
   justify-content: space-around;
   height: 9vh;
 }
 
-#meetingimg {
+#meeting3img {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-#meetingimg img {
+#meeting3img img {
   object-fit: fill;
   height: auto;
   width: 45vw;
@@ -26,7 +26,7 @@
   padding-left: 4vw;
 }
 
-#meetinginfo {
+#meeting3info {
   text-align: left;
   font-size: xx-large;
   font-family: sans-serif;
@@ -35,7 +35,7 @@
   padding-right: 49vw;
 }
 
-#officeinfomeeting {
+#officeinfomeeting3 {
   width: 40%;
   text-align: left;
   font-size: x-large;
@@ -53,7 +53,7 @@ li {
   text-align: start;
 }
 
-#meetingcancellation {
+#meeting3cancellation {
   font-size: large;
   display: flex;
   flex-direction: column;
@@ -61,15 +61,15 @@ li {
   padding-top: 14vh;
 }
 
-#meetingavailability {
+#meeting3availability {
   font-size: xxx-large;
 }
 
-#meetingavailabilitydescription {
+#meeting3availabilitydescription {
   font-style: italic;
 }
 
-#meetingavailabilitycontainer {
+#meeting3availabilitycontainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -77,34 +77,131 @@ li {
   padding-right: 13vw;
 }
 
-.calendarcontainerinmeetingpage {
+.calendarcontainerinmeeting3page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-right: 5vw;
 }
 
-#calendarinmeetingpage {
+#calendarinmeeting3page {
   display: flex;
   justify-content: center;
   padding-right: 7vw;
   padding-top: 6vh;
 }
 
-#calendarinmeetingpage select {
+#calendarinmeeting3page select {
   padding: 3%;
   margin: 3%;
 }
 
-.amenities {
+.amenitiesmeeting3 {
   padding-top: 12vh;
   font-size: x-large;
   font-weight: 600;
 }
 
-.amenitieslist {
+.amenitieslistmeeting3 {
   padding-top: 2vh;
   font-size: larger;
   font-family: system-ui;
   font-style: italic;
+}
+
+@media screen and (max-width: 412px) {
+
+  #officeinfomeeting3 {
+    width: 80vw;
+    text-align: left;
+    font-size: large;
+    display: flex;
+    padding-left: 53vw;
+    font-style: italic;
+    height: 18vh;
+    flex-direction: row;
+  }
+
+  #classimgmeeting3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 75vw;
+    padding-top: 31vh;
+  }
+
+  #classimgmeeting3 img {
+    width: 70vw;
+    padding-top: 4vh;
+    padding-left: 54vw;
+  }
+
+  #classimgmeeting3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 54vw;
+    padding-top: 31vh;
+  }
+
+  #classinfomeeting3 {
+    text-align: left;
+    font-size: xx-large;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 81vw;
+    padding-left: 32vw;
+  }
+
+  #calendarinmeeting3page {
+    display: flex;
+    justify-content: center;
+    padding-right: 7vw;
+    padding-top: 6vh;
+    flex-direction: column;
+    padding-left: 7vw;
+  }
+  #meeting3cancellation {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    padding-left: 8vw;
+    padding-top: 14vh;
+    padding-right: 10vw;
+  }
+  .contactnav {
+   width: max-content;
+  }
+  #meeting3availabilitycontainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5vw;
+    align-items: stretch;
+    padding-top: 0;
+  }
+  .amenitiesmeeting3 {
+    padding-top: 5vh;
+  }
+  #meeting3info {
+    padding-right: 19vw;
+    padding-left: 11vw;
+  }
+  #meeting3img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32vh;
+    padding-right: 50vw;
+  }
+  #meeting3img img {
+    object-fit: fill;
+    height: auto;
+    width: 81vw;
+    padding-top: 1vh;
+    padding-left: 50vw;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
 }

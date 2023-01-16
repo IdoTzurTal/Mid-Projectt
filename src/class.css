@@ -13,13 +13,13 @@
   height: 9vh;
 }
 
-#classimg {
+#classimgclass {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-#classimg img {
+#classimgclass img {
   object-fit: fill;
   height: auto;
   width: 45vw;
@@ -27,7 +27,7 @@
   padding-left: 4vw;
 }
 
-#classinfo {
+#classinfoclass {
   text-align: left;
   font-size: xx-large;
   font-family: sans-serif;
@@ -91,6 +91,7 @@ li {
   padding-right: 7vw;
   padding-top: 6vh;
 }
+
 #calendarinclasspage select {
   padding: 3%;
   margin: 3%;
@@ -107,4 +108,79 @@ li {
   font-size: larger;
   font-family: system-ui;
   font-style: italic;
+}
+
+@media screen and (max-width: 412px) {
+
+  #officeinfoclass {
+    width: 80vw;
+    text-align: left;
+    font-size: large;
+    display: flex;
+    padding-left: 53vw;
+    font-style: italic;
+    height: 18vh;
+    flex-direction: row;
+  }
+
+  #classimgclass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 75vw;
+    padding-top: 31vh;
+  }
+
+  #classimgclass img {
+    width: 70vw;
+    padding-top: 4vh;
+    padding-left: 54vw;
+  }
+
+  #classimgclass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 54vw;
+    padding-top: 31vh;
+  }
+
+  #classinfoclass {
+    text-align: left;
+    font-size: xx-large;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 81vw;
+    padding-left: 32vw;
+  }
+
+  #calendarinclasspage {
+    display: flex;
+    justify-content: center;
+    padding-right: 7vw;
+    padding-top: 6vh;
+    flex-direction: column;
+    padding-left: 7vw;
+  }
+  #classcancellation {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    padding-left: 8vw;
+    padding-top: 14vh;
+    padding-right: 10vw;
+  }
+  .contactnav {
+   width: max-content;
+  }
+  #classavailabilitycontainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5vw;
+    align-items: stretch;
+  }
+  .amenitiesclass {
+    padding-top: 5vh;
+  }
 }

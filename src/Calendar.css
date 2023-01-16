@@ -27,3 +27,8 @@
     background-color: gray;
     color: rgb(62, 50, 50);
 }
+@media screen and (max-width: 412px) {
+    .calendarcontainerincalendarpage { 
+        margin: 1vw;
+    }
+}

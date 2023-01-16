@@ -88,8 +88,8 @@ function Meeting() {
                     <div id="meetingavailabilitycontainer">
                         <span id="meetingavailability">Check availability now!</span>
                         <span id="meetingavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
-                        <span className="amenities">What this place offers</span>
-                        <ul className="amenitieslist">
+                        <span className="amenitiesmeeting">What this place offers</span>
+                        <ul className="amenitieslistmeeting">
                         <li>Room Number: {rooms[6].name}</li>
                             <li>Room Type: {rooms[6].type}</li>
                             <li>Room Capacity: {rooms[6].capacity}</li>

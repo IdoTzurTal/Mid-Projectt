@@ -7,19 +7,19 @@
   width: 100vw;
 }
 
-#fleximgdescriptionlecture {
+#fleximgdescriptionlecture3 {
   display: flex;
   justify-content: space-around;
   height: 9vh;
 }
 
-#lectureimg {
+#lecture3img {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-#lectureimg img {
+#lecture3img img {
   object-fit: fill;
   height: auto;
   width: 45vw;
@@ -27,7 +27,7 @@
   padding-left: 4vw;
 }
 
-#lectureinfo {
+#lecture3info {
   text-align: left;
   font-size: xx-large;
   font-family: sans-serif;
@@ -36,7 +36,7 @@
   padding-right: 46vw;
 }
 
-#officeinfolecture {
+#officeinfolecture3 {
   width: 40%;
   text-align: left;
   font-size: x-large;
@@ -54,7 +54,7 @@ li {
   text-align: start;
 }
 
-#lecturecancellation {
+#lecture3cancellation {
   font-size: large;
   display: flex;
   flex-direction: column;
@@ -62,15 +62,15 @@ li {
   padding-top: 14vh;
 }
 
-#lectureavailability {
+#lecture3availability {
   font-size: xxx-large;
 }
 
-#lectureavailabilitydescription {
+#lecture3availabilitydescription {
   font-style: italic;
 }
 
-#lectureavailabilitycontainer {
+#lecture3availabilitycontainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -78,34 +78,128 @@ li {
   padding-right: 13vw;
 }
 
-.calendarcontainerinlecturepage {
+.calendarcontainerinlecture3page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-right: 5vw;
 }
 
-#calendarinlecturepage {
+#calendarinlecture3page {
   display: flex;
   justify-content: center;
   padding-right: 7vw;
   padding-top: 6vh;
 }
 
-#calendarinlecturepage select {
+#calendarinlecture3page select {
   padding: 3%;
   margin: 3%;
 }
 
-.amenities {
+.amenitieslecture3 {
   padding-top: 12vh;
   font-size: x-large;
   font-weight: 600;
 }
 
-.amenitieslist {
+.amenitieslistlecture3 {
   padding-top: 2vh;
   font-size: larger;
   font-family: system-ui;
   font-style: italic;
+}
+
+@media screen and (max-width: 412px) {
+
+  #officeinfolecture3 {
+    width: 80vw;
+    text-align: left;
+    font-size: large;
+    display: flex;
+    padding-left: 53vw;
+    font-style: italic;
+    height: 18vh;
+    flex-direction: row;
+  }
+
+  #classimglecture3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 75vw;
+    padding-top: 31vh;
+  }
+
+  #classimglecture3 img {
+    width: 70vw;
+    padding-top: 4vh;
+    padding-left: 54vw;
+  }
+
+  #classimglecture3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 54vw;
+    padding-top: 31vh;
+  }
+
+  #classinfolecture3 {
+    text-align: left;
+    font-size: xx-large;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 81vw;
+    padding-left: 32vw;
+  }
+
+  #calendarinlecture3page {
+    display: flex;
+    justify-content: center;
+    padding-right: 7vw;
+    padding-top: 6vh;
+    flex-direction: column;
+    padding-left: 7vw;
+  }
+  #lecture3cancellation {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    padding-left: 8vw;
+    padding-top: 14vh;
+    padding-right: 10vw;
+  }
+  .contactnav {
+   width: max-content;
+  }
+  #lecture3availabilitycontainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5vw;
+    align-items: stretch;
+    padding-top: 0;
+  }
+  .amenitieslecture3 {
+    padding-top: 5vh;
+  }
+  #lecture3info {
+    padding-right: 19vw;
+    padding-left: 11vw;
+  }
+  #lecture3img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32vh;
+    padding-right: 50vw;
+  }
+  #lecture3img img {
+    object-fit: fill;
+    height: auto;
+    width: 81vw;
+    padding-top: 1vh;
+    padding-left: 50vw;
+  }
 }

@@ -13,13 +13,13 @@
   height: 9vh;
 }
 
-#classimg {
+#classimgclass2 {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-#classimg img {
+#classimgclass2 img {
   object-fit: fill;
   height: auto;
   width: 45vw;
@@ -27,7 +27,7 @@
   padding-left: 4vw;
 }
 
-#classinfo {
+#classinfoclass2 {
   text-align: left;
   font-size: xx-large;
   font-family: sans-serif;
@@ -36,7 +36,7 @@
   padding-right: 54vw;
 }
 
-#officeinfoclass {
+#officeinfoclass2 {
   width: 40%;
   text-align: left;
   font-size: x-large;
@@ -54,7 +54,7 @@ li {
   text-align: start;
 }
 
-#classcancellation {
+#class2cancellation {
   font-size: large;
   display: flex;
   flex-direction: column;
@@ -62,49 +62,123 @@ li {
   padding-top: 14vh;
 }
 
-#classavailability {
+#class2availability {
   font-size: xxx-large;
 }
 
-#classavailabilitydescription {
+#class2availabilitydescription {
   font-style: italic;
 }
 
-#classavailabilitycontainer {
+#class2availabilitycontainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-right: 13vw;
 }
 
-.calendarcontainerinclasspage {
+.calendarcontainerinclass2page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-right: 5vw;
 }
 
-#calendarinclasspage {
+#calendarinclass2page {
   display: flex;
   justify-content: center;
   padding-right: 7vw;
   padding-top: 6vh;
 }
 
-#calendarinclasspage select {
+#calendarinclass2page select {
   padding: 3%;
   margin: 3%;
 }
 
-.amenities {
+.amenitiesclass2 {
   padding-top: 12vh;
   font-size: x-large;
   font-weight: 600;
 }
 
-.amenitieslist {
+.amenitieslistclass2 {
   padding-top: 2vh;
   font-size: larger;
   font-family: system-ui;
   font-style: italic;
+}
+@media screen and (max-width: 412px) {
+
+  #officeinfoclass2 {
+    width: 80vw;
+    text-align: left;
+    font-size: large;
+    display: flex;
+    padding-left: 53vw;
+    font-style: italic;
+    height: 18vh;
+    flex-direction: row;
+  }
+
+  #classimgclass2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 75vw;
+    padding-top: 31vh;
+  }
+
+  #classimgclass2 img {
+    width: 70vw;
+    padding-top: 4vh;
+    padding-left: 54vw;
+  }
+
+  #classimgclass2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 54vw;
+    padding-top: 31vh;
+  }
+
+  #classinfoclass2 {
+    text-align: left;
+    font-size: xx-large;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 81vw;
+    padding-left: 32vw;
+  }
+
+  #calendarinclass2page {
+    display: flex;
+    justify-content: center;
+    padding-right: 7vw;
+    padding-top: 6vh;
+    flex-direction: column;
+    padding-left: 7vw;
+  }
+  #class2cancellation {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    padding-left: 8vw;
+    padding-top: 14vh;
+    padding-right: 10vw;
+  }
+  .contactnav {
+   width: max-content;
+  }
+  #class2availabilitycontainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5vw;
+    align-items: stretch;
+  }
+  .amenitiesclass2 {
+    padding-top: 5vh;
+  }
 }

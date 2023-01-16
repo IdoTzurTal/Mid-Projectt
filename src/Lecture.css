@@ -97,15 +97,109 @@ li {
   margin: 3%;
 }
 
-.amenities {
+.amenitieslecture {
   padding-top: 12vh;
   font-size: x-large;
   font-weight: 600;
 }
 
-.amenitieslist {
+.amenitieslistlecture {
   padding-top: 2vh;
   font-size: larger;
   font-family: system-ui;
   font-style: italic;
+}
+
+@media screen and (max-width: 412px) {
+
+  #officeinfolecture {
+    width: 80vw;
+    text-align: left;
+    font-size: large;
+    display: flex;
+    padding-left: 53vw;
+    font-style: italic;
+    height: 18vh;
+    flex-direction: row;
+  }
+
+  #classimglecture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 75vw;
+    padding-top: 31vh;
+  }
+
+  #classimglecture img {
+    width: 70vw;
+    padding-top: 4vh;
+    padding-left: 54vw;
+  }
+
+  #classimglecture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 54vw;
+    padding-top: 31vh;
+  }
+
+  #classinfolecture {
+    text-align: left;
+    font-size: xx-large;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 81vw;
+    padding-left: 32vw;
+  }
+
+  #calendarinlecturepage {
+    display: flex;
+    justify-content: center;
+    padding-right: 7vw;
+    padding-top: 6vh;
+    flex-direction: column;
+    padding-left: 7vw;
+  }
+  #lecturecancellation {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    padding-left: 8vw;
+    padding-top: 14vh;
+    padding-right: 10vw;
+  }
+  .contactnav {
+   width: max-content;
+  }
+  #lectureavailabilitycontainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5vw;
+    align-items: stretch;
+    padding-top: 0;
+  }
+  .amenitieslecture {
+    padding-top: 5vh;
+  }
+  #lectureinfo {
+    padding-right: 19vw;
+    padding-left: 11vw;
+  }
+  #lectureimg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 32vh;
+    padding-right: 50vw;
+  }
+  #lectureimg img {
+    object-fit: fill;
+    height: auto;
+    width: 81vw;
+    padding-top: 1vh;
+    padding-left: 50vw;
+  }
 }

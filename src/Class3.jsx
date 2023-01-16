@@ -61,8 +61,8 @@ function Class3() {
           </Tabs>
         </Box>
         </div>
-      <div id="fleximgdescriptionclass">
-        <div id="classinfo">
+      <div id="fleximgdescriptionclass3">
+        <div id="classinfoclass3">
           <div>
             <h2>Yosemite Classroom</h2>
           </div>
@@ -71,8 +71,8 @@ function Class3() {
           </div>
         </div>
       </div>
-      <div id="classimg">
-        <span id="officeinfoclass">
+      <div id="classimgclass3">
+        <span id="officeinfoclass3">
           Elevated, move-in ready private workspace for teams of 20 or more.<br />
           Private amenities can include interior offices, meeting rooms, lounges, pantries.<br /> and more
           Customise your workspace with a suite of office add-ons, finishes and enhancements.
@@ -82,13 +82,13 @@ function Class3() {
           alt="classroom img"
         />
       </div>
-      <div className="calendarcontainerinclasspage">
-        <div id="calendarinclasspage">
-          <div id="classavailabilitycontainer">
-            <span id="classavailability">Check availability now!</span>
-            <span id="classavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
-            <span className="amenities">What this place offers</span>
-              <ul className="amenitieslist">
+      <div className="calendarcontainerinclass3page">
+        <div id="calendarinclass3page">
+          <div id="class3availabilitycontainer">
+            <span id="class3availability">Check availability now!</span>
+            <span id="class3availabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
+            <span className="amenitiesclass3">What this place offers</span>
+              <ul className="amenitieslistclass3">
               <li>Room Number: {rooms[5].name}</li>
                             <li>Room Type: {rooms[5].type}</li>
                             <li>Room Capacity: {rooms[5].capacity}</li>
@@ -102,7 +102,7 @@ function Class3() {
       </div>
 
 
-      <div id="classcancellation">
+      <div id="class3cancellation">
         <h3>Cancellation rules and company policy</h3>
         <ul>
           <li>

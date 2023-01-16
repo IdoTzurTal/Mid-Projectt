@@ -71,8 +71,8 @@ function Class2() {
           </div>
         </div>
       </div>
-      <div id="classimg">
-        <span id="officeinfoclass">
+      <div id="classimgclass2">
+        <span id="officeinfoclass2">
           Elevated, move-in ready private workspace for teams of 20 or more.<br />
           Private amenities can include interior offices, meeting rooms, lounges, pantries.<br /> and more
           Customise your workspace with a suite of office add-ons, finishes and enhancements.
@@ -82,13 +82,13 @@ function Class2() {
           alt="classroom img"
         />
       </div>
-      <div className="calendarcontainerinclasspage">
-        <div id="calendarinclasspage">
-          <div id="classavailabilitycontainer">
-            <span id="classavailability">Check availability now!</span>
-            <span id="classavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
-            <span className="amenities">What this place offers</span>
-              <ul className="amenitieslist">
+      <div className="calendarcontainerinclass2page">
+        <div id="calendarinclass2page">
+          <div id="class2availabilitycontainer">
+            <span id="class2availability">Check availability now!</span>
+            <span id="class2availabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
+            <span className="amenitiesclass2">What this place offers</span>
+              <ul className="amenitieslistclass2">
               <li>Room Number: {rooms[4].name}</li>
                             <li>Room Type: {rooms[4].type}</li>
                             <li>Room Capacity: {rooms[4].capacity}</li>
@@ -102,7 +102,7 @@ function Class2() {
       </div>
 
 
-      <div id="classcancellation">
+      <div id="class2cancellation">
         <h3>Cancellation rules and company policy</h3>
         <ul>
           <li>
