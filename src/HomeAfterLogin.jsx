@@ -24,7 +24,6 @@ function HomeAfterLogin() {
   const { user, setuser } = useContext(Detail);
   setuser(localStorage.getItem("user"));
   console.log(user);
-// useEffect(() => {
   return (
     <div>
         <div>
@@ -54,12 +53,11 @@ function HomeAfterLogin() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            {/* {user == "Admin" && ( */}
+            { user == '"Admin"' && (
               <NavLink to="/Admin" element={<Admin />}>
-                {" "}
                 <Tab label="Admin" />
               </NavLink>
-            {/* )} */}
+            )} 
           </Tabs>
         </Box>
         </div>

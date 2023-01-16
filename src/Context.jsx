@@ -4,7 +4,9 @@ export const Detail = createContext();
 
 function Context({children}) {
   const [favorite,setfavorite] =useState([{}])
+  const [userRequest, setUserRequest] = useState();
   const [user, setuser] = useState();
+  const [requests, setRequests] = useState([]);
   const [rooms, setrooms] = useState([
     {
       name: "room 1",
@@ -101,7 +103,7 @@ function Context({children}) {
   const [meeting,setmeeting] =useState([]);
   
   return (
-    <Detail.Provider value={{ rooms, setrooms, meeting, setmeeting , favorite,setfavorite,user, setuser}}>{children}</Detail.Provider>
+    <Detail.Provider value={{ rooms, setrooms, meeting, setmeeting , favorite,setfavorite,user, setuser,requests, setRequests}}>{children}</Detail.Provider>
   );
 }
 

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Tab } from "@mui/material";
 import { Box } from "@mui/system";
 import Tabs from "@mui/material/Tabs";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import HomeAfterLogin from "./HomeAfterLogin";
 import Search from "./Search";
 import Favoritepage from "./Favorite";
@@ -10,13 +10,14 @@ import Admin from "./Admin";
 import Rooms from "./Rooms";
 import AboutAfterLogin from "./AboutAfterLogin"
 import ContactAfterLogin from "./ContactAfterLogin"
+import { Detail } from "./Context";
 
 function Contact() {
+  
   const [request, setRequest] = useState();
-  const [userRequest, setUserRequest] = useState();
+  const {userRequest, setUserRequest} = useContext(Detail);
   const [detail, setDetail] = useState();
-  const [requests, setRequests] = useState([]);
-
+  const {requests, setRequests} = useContext(Detail);
   function handleSubmit(e) {
     e.preventDefault();
     setRequests([

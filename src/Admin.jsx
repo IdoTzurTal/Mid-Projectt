@@ -15,20 +15,14 @@ import Search from "./Search";
 import Favoritepage from "./Favorite";
 
 function Admin() {
+  const { user, setuser } = useContext(Detail);
+  setuser(localStorage.getItem("user"));
+  const {requests, setRequests} = useContext(Detail);
   const { meeting, setmeeting } = useContext(Detail);
   const { rooms, setrooms } = useContext(Detail);
   const [favorite, setfavorite] = useState();
-   
-  
-    
-    // rooms.map((single, index) => {
-    //     if (single.favorite== true) {
-    //       favorite.push(single) 
-    //     }})
-    //     console.log(favorite);
-    
-    
-   
+  const {userRequest, setUserRequest} = useContext(Detail);
+  console.log(requests); 
   return (
     <div>
         <div>
@@ -58,17 +52,31 @@ function Admin() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            {/* {user == "Admin" && ( */}
+            {user == "Admin" && (
               <NavLink to="/Admin" element={<Admin />}>
                 {" "}
                 <Tab label="Admin" />
               </NavLink>
-            {/* )} */}
+            )}
           </Tabs>
         </Box>
         </div>
       <h2>Welcome, Admin</h2>
-      <h4>Today's meetings</h4>
+        <h4>Today's requests</h4>
+        {requests?.map((single, index) => {
+          return(
+          <div key={index}>
+            <p>
+             tag: {single.tag}</p>
+             <p> details: {single.details}</p>
+            <hr />
+
+          </div>);
+
+        })}
+
+
+
     </div>
   );
 }
