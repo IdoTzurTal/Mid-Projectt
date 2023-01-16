@@ -31,7 +31,7 @@ function App() {
       <Context>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/Home" element={<HomePage />}></Route>
+        <Route path="/Home" element={<HomeAfterLogin />}></Route>
         <Route path="/Login" element={<Login />}></Route>
         <Route path='/About' element={<About />}></Route>
         <Route path='/Contact' element={<Contact />}></Route>
