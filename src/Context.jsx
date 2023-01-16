@@ -32,7 +32,7 @@ function Context({children}) {
       airconditioning: "yes",
       projector: "yes",
       zoom: "yes",
-      board: "no",
+      whiteboard: "no",
       favorite: false,
     },
 
