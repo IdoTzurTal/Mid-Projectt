@@ -4,6 +4,7 @@ export const Detail = createContext();
 
 function Context({children}) {
   const [favorite,setfavorite] =useState([{}])
+  const [user, setuser] = useState();
   const [rooms, setrooms] = useState([
     {
       name: "room 1",
@@ -32,7 +33,7 @@ function Context({children}) {
       airconditioning: "yes",
       projector: "yes",
       zoom: "yes",
-      board: "no",
+      whiteboard: "no",
       favorite: false,
     },
 
@@ -100,7 +101,7 @@ function Context({children}) {
   const [meeting,setmeeting] =useState([]);
   
   return (
-    <Detail.Provider value={{ rooms, setrooms, meeting, setmeeting , favorite,setfavorite}}>{children}</Detail.Provider>
+    <Detail.Provider value={{ rooms, setrooms, meeting, setmeeting , favorite,setfavorite,user, setuser}}>{children}</Detail.Provider>
   );
 }
 

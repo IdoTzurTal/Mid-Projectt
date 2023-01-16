@@ -31,7 +31,7 @@ function App() {
       <Context>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/Home" element={<HomeAfterLogin />}></Route>
+        <Route path="/HomeAfterLogin" element={<HomeAfterLogin />}></Route>
         <Route path="/Login" element={<Login />}></Route>
         <Route path='/About' element={<About />}></Route>
         <Route path='/Contact' element={<Contact />}></Route>
@@ -49,6 +49,7 @@ function App() {
         <Route path='/Admin' element={<Admin />}></Route>
         <Route path='/Favoritepage' element={<Favoritepage />}></Route>
         <Route path='/*' element={<Error />}></Route>
+        <Route path='/Admin' element={<Admin />}></Route>
       </Routes>
       </Context>
     </div>
