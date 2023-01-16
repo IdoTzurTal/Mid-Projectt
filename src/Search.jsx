@@ -5,11 +5,9 @@ import Context from "./Context";
 import { Children } from "react";
 import { Navigate, useNavigate } from "react-router";
 
-
 export default function Search() {
-
   const navigate = useNavigate();
-
+  const { roomid, setroomid } = useContext(Detail);
   const [typecheck, settypechek] = useState();
   const [favorite, setfavorite] = useState(false);
   const [fav, setfav] = useState([
@@ -23,9 +21,8 @@ export default function Search() {
     "not favorite",
     "not favorite",
   ]);
- 
-  const {rooms, setrooms} = useContext(Detail);
 
+  const { rooms, setrooms } = useContext(Detail);
 
   function Fun() {
     const temp = [];
@@ -103,55 +100,63 @@ export default function Search() {
   };
 
   function navigatetospesific(roomsingle) {
-    
     switch (roomsingle) {
       case "room 1":
+        setroomid(0);
         console.log("room1");
-        navigate('/Lectureroom')
-       
+        navigate("/Lectureroom");
+
         break;
-    
+
       case "room 2":
+        setroomid(1);
         console.log("room2");
-        navigate('/Lecture2')
+        navigate("/Lecture2");
         break;
-    
+
       case "room 3":
+        setroomid(2);
         console.log("room3");
-        navigate('/Lecture3')
+        navigate("/Lecture3");
         break;
       case "room 4":
+        setroomid(3);
         console.log("room4");
-        navigate('/Classroom')
+        navigate("/Classroom");
         break;
       case "room 5":
+        setroomid(4);
         console.log("room5");
-        navigate('/Class2')
+        navigate("/Class2");
         break;
       case "room 6":
+        setroomid(5);
         console.log("room6");
-        navigate('/Class3')
+        navigate("/Class3");
         break;
       case "room 7":
+        setroomid(6);
         console.log("room7");
-        navigate('/Meetingroom')
+        navigate("/Meetingroom");
         break;
       case "room 8":
+        setroomid(7);
         console.log("room8");
-        navigate('/Meeting2')
+        navigate("/Meeting2");
         break;
       case "room 9":
+        setroomid(8);
         console.log("room9");
-        navigate('/Meeting3')
+        navigate("/Meeting3");
         break;
-     
-    
-      default: console.log(roomsingle);
+
+      default:
+        console.log(roomsingle);
         break;
     }
   }
 
-  let roomsingle =[];
+  let roomsingle = [];
   return (
     <div>
       <h1>Our Rooms</h1>
@@ -185,7 +190,7 @@ export default function Search() {
       <button onClick={(e) => window.location.reload(false)}>reset</button>
       <h2>rooms</h2>
       {rooms.map((single, index) => {
-        roomsingle.push(single.name)
+        roomsingle.push(single.name);
         return (
           <div>
             <p key={index}>
@@ -214,7 +219,13 @@ export default function Search() {
               >
                 {fav[index]}
               </button>
-              <button onClick={(e)=>{navigatetospesific(roomsingle[index])}}>select room</button>
+              <button
+                onClick={(e) => {
+                  navigatetospesific(roomsingle[index]);
+                }}
+              >
+                select room
+              </button>
             </p>
             <hr />
           </div>

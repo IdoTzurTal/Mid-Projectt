@@ -19,7 +19,6 @@
 #flexendhome {
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(rgb(43, 42, 42), rgb(251, 247, 247));
 }
 
 #flexicons {

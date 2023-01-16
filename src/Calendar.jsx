@@ -1,6 +1,6 @@
 import "./Calendar.css";
 import Calendar from "react-calendar";
-import React, { useState , useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "react-calendar/dist/Calendar.css";
 import { Detail } from "./Context";
 
@@ -8,14 +8,34 @@ export default function Ckre() {
   const [value, onChange] = useState(new Date());
   const [chose, setchose] = useState();
   const [day, setDay] = useState([]);
-  const [dayId, setDayId] = useState();
+  // להוסיף לדיי שהוא שווה לדיי2 בכניסה לחדר
   const [starttime, setstarttime] = useState(8);
   const [endtime, setendtime] = useState(0);
   const [array, setarray] = useState([]);
   const [lior, setLior] = useState(-1);
   const [eveneven, seteveneven] = useState(false);
   const [objNum, setObjNum] = useState();
-  const {meeting, setmeeting} = useContext(Detail);
+  const { meeting, setmeeting } = useContext(Detail);
+  const { rooms, setrooms } = useContext(Detail);
+  const { roomid, setroomid } = useContext(Detail);
+  //   for(let b=0;b<rooms[roomid]?.day2.length;b++){
+  //   setDay(...day,rooms[roomid]?.day2[b]);
+  // }
+  // if (rooms[roomid]?.day2.length > 1) {
+  // for (let i = 0; i < 7; i++) {
+  //   day.push(rooms[roomid]?.day2[i]);
+  // }
+  // }
+  useEffect(() => {
+    console.log("useeffect", rooms[roomid]);
+    console.log("useeffect", rooms[roomid]?.day2);
+    console.log(day);
+    rooms[roomid]?.day2.shift(day);
+    rooms[roomid]?.day2.push(day);
+
+    console.log("useeffect", rooms[roomid]?.day2);
+    // להוציא חלק מתחילת המערך כך נשמר רק המערך הרצוי ואיתו להמשיך
+  }, [day]);
   function name() {
     setLior(-1);
 
@@ -82,8 +102,9 @@ export default function Ckre() {
         monthnum: chose?.toString()?.slice(8, 10),
         year: chose?.toString()?.slice(11, 15),
         selected: [...array],
-    }])
-    console.log(meeting , "hello");
+      },
+    ]);
+    console.log(meeting, "hello");
   }
 
   const handleClick = (e) => {
@@ -104,6 +125,7 @@ export default function Ckre() {
         // bhsdbvhsnvjdsjnvhdsbnhdsncdnjhdnhdsbvhds
 
         console.log(day[j]);
+        console.log("rooms ", rooms);
         setLior(j);
         break;
       } else {
@@ -171,7 +193,9 @@ export default function Ckre() {
         <option value={13}>13:00</option>
         <option value={14}>14:00</option>
       </select>
-      <button id="semek" onClick={() => name()}>Submit</button>
+      <button id="semek" onClick={() => name()}>
+        Submit
+      </button>
     </div>
   );
 }

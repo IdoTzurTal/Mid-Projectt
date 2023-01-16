@@ -12,6 +12,8 @@ import LogIn from "./LogIn";
 import Contact from "./Pages/Contact";
 import Search from "./Search";
 import axios from "axios";
+import { Detail } from "./Context";
+import Rooms from "./Rooms";
 
 const options = {
   method: "GET",
@@ -25,6 +27,8 @@ const options = {
 
 function HomePage() {
   const [covidData, setCovidData] = React.useState();
+  const { rooms, setrooms } = React.useContext(Detail);
+  const { roomid, setroomid } = React.useContext(Detail);
 
   React.useEffect(() => {
     axios
@@ -78,6 +82,42 @@ function HomePage() {
           <span>{covidData?.response[0].deaths.total + " "}</span>
         </p>
       </div>
+      <hr></hr>
+      <div>
+        {rooms.map((item) => (
+          <div>
+            <p>{item.name}</p>
+            <div>
+              {item.day2[0]?.map((item2) => (
+                <div>
+                  <p>{item2.id}</p>
+                  <p>
+                    {item2?.selected.map((item3) => (
+                      <div>
+                        <p>{item3 + ":00"}</p>
+                      </div>
+                    ))}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+        {console.log("useeffect", rooms)}
+        {console.log("noder", rooms[0].id)}
+        {/* {for (let index = 0; index < rooms[roomid].day2.length; index++){}
+        {
+          <div>
+            <h2>day</h2>
+            <p>{rooms[roomid].day2[index].id}</p>
+            <h4>already taken</h4>
+            <p>{rooms[roomid].day2[index].selected[0]}</p>
+          </div>
+        }} */}
+      </div>
+      <NavLink to="/Rooms" element={<Rooms />}>
+        <button></button>
+      </NavLink>
       <div id="flexendhome">
         <div id="flexicons">
           <a href="https://he-il.facebook.com/" target="_blank">
@@ -101,14 +141,40 @@ function HomePage() {
         </div>
       </div>
       <div>
-        <a href="https://ul.waze.com/ul?place=ChIJueZL8cZLHRUR4v_7nbKJsMw&ll=32.08728010%2C34.80409030&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="100%"
+              height="400"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=%D7%97%D7%99%D7%9C%D7%96%D7%95%D7%9F%203&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
+            {/* <a href="https://putlocker-is.org">putlocker</a> */}
+            <br />
+            <style>
+              .mapouterposition:relative;text-align:right;height:400px;width:1000px;
+            </style>
+            {/* <a href="https://www.embedgooglemap.net">
+              google maps iframe code generator
+            </a> */}
+            <style>
+              .gmap_canvas
+              overflow:hidden;background:none!important;height:400px;width:1000px;
+            </style>
+          </div>
+        </div>
+        {/* <a href="https://ul.waze.com/ul?place=ChIJueZL8cZLHRUR4v_7nbKJsMw&ll=32.08728010%2C34.80409030&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
           <img
             src="Location2.png"
             alt="Click here for location"
             width="1500px"
             height="300px"
           />
-        </a>
+        </a> */}
       </div>
     </div>
   );
