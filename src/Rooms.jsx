@@ -12,12 +12,15 @@ import Search from './Search'
 import HomeAfterLogin from './HomeAfterLogin'
 import Favoritepage from './Favorite'
 import Admin from './Admin'
-import { Detail } from "./Context";
-
+import { Detail } from './Context'
+import { useContext } from 'react'
 
 function Rooms() {
   const { rooms, setrooms } = useContext(Detail);
   const { roomid, setroomid } = useContext(Detail);
+   const { user, setuser } = useContext(Detail);
+    setuser(localStorage.getItem("user"));
+
     return (
         <div>
         <div>
@@ -47,12 +50,11 @@ function Rooms() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            {/* {user == "Admin" && ( */}
+            { user == '"Admin"' && (
               <NavLink to="/Admin" element={<Admin />}>
-                {" "}
                 <Tab label="Admin" />
               </NavLink>
-            {/* )} */}
+            )} 
           </Tabs>
         </Box>
         </div>

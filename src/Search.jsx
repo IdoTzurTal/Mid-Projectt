@@ -26,6 +26,8 @@ import Rooms from "./Rooms";
 import './Search.css'
 
 export default function Search() {
+  const { user, setuser } = useContext(Detail);
+  setuser(localStorage.getItem("user"));
   const navigate = useNavigate();
   const { roomid, setroomid } = useContext(Detail);
   const [typecheck, settypechek] = useState();
@@ -201,16 +203,18 @@ export default function Search() {
               {" "}
               <Tab label="search" />
             </NavLink>
-            <NavLink to="/Favoritepage" element={<Favoritepage />}>
+            <NavLink  onClick={() => {
+                  localStorage.setItem('favorite',JSON.stringify(favorite) );
+                  JSON.parse(favorite)}}                 
+                  to="/Favoritepage" element={<Favoritepage />} >
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            {/* {user == "Admin" && ( */}
+            { user == '"Admin"' && (
               <NavLink to="/Admin" element={<Admin />}>
-                {" "}
                 <Tab label="Admin" />
               </NavLink>
-            {/* )} */}
+            )} 
           </Tabs>
         </Box>
         </div>

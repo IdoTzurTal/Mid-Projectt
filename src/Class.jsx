@@ -20,6 +20,8 @@ import Admin from "./Admin";
 function Class() {
   // const value = useContext(CalendarApi)
   const {rooms, setrooms} = useContext(Detail);
+  const { user, setuser } = useContext(Detail);
+  setuser(localStorage.getItem("user"));
   return (
       <div>
         <div>
@@ -49,12 +51,11 @@ function Class() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            {/* {user == "Admin" && ( */}
+            { user == '"Admin"' && (
               <NavLink to="/Admin" element={<Admin />}>
-                {" "}
                 <Tab label="Admin" />
               </NavLink>
-            {/* )} */}
+            )} 
           </Tabs>
         </Box>
         </div>

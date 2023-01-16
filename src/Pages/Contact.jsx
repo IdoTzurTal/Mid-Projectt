@@ -25,11 +25,11 @@ function Contact() {
     console.log(requests);
   }
     return (
-        <div>
-        <div>
+       
+       <div><div>
         <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
         <Tabs className="contactnav" centered>
-          <NavLink to='/Home' element={<HomePage/>} > <Tab label="Home" /></NavLink>
+          <NavLink to='/' element={<HomePage/>} > <Tab label="Home" /></NavLink>
           <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
           <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
           <NavLink to='/Login' element={<LogIn/>}> <Tab label="log in" /></NavLink>
@@ -50,31 +50,8 @@ function Contact() {
                 </p>
                 {/* להוסיף אופציה לשליחת מייל עם ספריית mail.js */}
             </div>
-        <form onSubmit={handleSubmit}>
-          <select
-            name="company"
-            id="company"
-            onChange={(e) => setRequest(e.target.value)}
-          >
-            <option value="selectreasson">select reasson</option>
-            <option value="callit">call it</option>
-            <option value="meetingroom">meeting room</option>
-          </select>
-          <input
-            type="text"
-            placeholder="user name"
-            onChange={(e) => setUserRequest(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Detail"
-            onChange={(e) => setDetail(e.target.value)}
-          />
-          <input type="submit" value={"log in"} />
-        </form>
-      </div>
     </div>
-  );
-}
+    </div>
+    ); }
 
 export default Contact;

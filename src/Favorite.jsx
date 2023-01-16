@@ -8,10 +8,12 @@ import AboutAfterLogin from "./AboutAfterLogin"
 import ContactAfterLogin from "./ContactAfterLogin"
 import Search from "./Search";
 import Admin from "./Admin";
-
-
+import { Detail } from "./Context";
+import { useContext } from "react";
 
 export default function Favoritepage() {
+  const { user, setuser } = useContext(Detail);
+  setuser(localStorage.getItem("user"));
   let listfav = [{}];
   listfav = JSON.parse(localStorage.getItem("favorite"));
   console.log(listfav);
@@ -44,10 +46,11 @@ export default function Favoritepage() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            <NavLink to="/Admin" element={<Admin />}>
-              {" "}
-              <Tab label="Admin" />
-            </NavLink>
+            { user == '"Admin"' && (
+              <NavLink to="/Admin" element={<Admin />}>
+                <Tab label="Admin" />
+              </NavLink>
+            )} 
           </Tabs>
         </Box>
       </div>

@@ -22,6 +22,8 @@ import Rooms from "./Rooms";
 function Class2() {
   // const value = useContext(CalendarApi)
   const {rooms, setrooms} = useContext(Detail);
+  const { user, setuser } = useContext(Detail);
+  setuser(localStorage.getItem("user"));
   return (
     <div>
         <div>
@@ -51,12 +53,11 @@ function Class2() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            {/* {user == "Admin" && ( */}
+            { user == '"Admin"' && (
               <NavLink to="/Admin" element={<Admin />}>
-                {" "}
                 <Tab label="Admin" />
               </NavLink>
-            {/* )} */}
+            )} 
           </Tabs>
         </Box>
         </div>

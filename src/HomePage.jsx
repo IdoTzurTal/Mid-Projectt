@@ -46,9 +46,9 @@ function HomePage() {
     <div>
       <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
         <Tabs className="homebnav" centered>
-          <NavLink to="/Home" element={<HomePage />}>
+          <NavLink to="/" element={<HomePage />}>
             {" "}
-            <Tab label="cyber pro" />
+            <Tab label="Home" />
           </NavLink>
           <NavLink to="/About" element={<About />}>
             {" "}

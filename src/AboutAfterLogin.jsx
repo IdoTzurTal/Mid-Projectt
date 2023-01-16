@@ -11,14 +11,15 @@ import ContactAfterLogin from "./ContactAfterLogin"
 import Admin from "./Admin";
 import Search from "./Search";
 import Favoritepage from "./Favorite";
-
-
+import { useContext } from "react";
+import { Detail } from "./Context";
 function Contact() {
   const [request, setRequest] = useState();
   const [userRequest, setUserRequest] = useState();
   const [detail, setDetail] = useState();
   const [requests, setRequests] = useState([]);
-
+  const { user, setuser } = useContext(Detail);
+  setuser(localStorage.getItem("user"));
   function handleSubmit(e) {
     e.preventDefault();
     setRequests([
@@ -56,12 +57,11 @@ function Contact() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            {/* {user == "Admin" && ( */}
+            { user == '"Admin"' && (
               <NavLink to="/Admin" element={<Admin />}>
-                {" "}
                 <Tab label="Admin" />
               </NavLink>
-            {/* )} */}
+            )} 
           </Tabs>
         </Box>
         </div>
