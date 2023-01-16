@@ -54,13 +54,13 @@ export default function Favoritepage() {
           </Tabs>
         </Box>
       </div>
-      <h1>favorite rooms</h1>
+      <h1>My Favorites</h1>
       {listfav.map((item, index) => {
         if (index > 0) {
           return (
-            <div>
+            <div className="buyasearch">
               <p key={index}>
-                <h4> name: {item?.single?.name}</h4>
+                <h4>{item?.single?.name}</h4>
                 <br />
                 Room Type: {item?.single?.type}
                 <br />

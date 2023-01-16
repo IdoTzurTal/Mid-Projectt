@@ -100,52 +100,6 @@ function Lecture() {
                     <Ckre />
                 </div>
             </div>
-
-    <div>
-      <div id="fleximgdescriptionlecture">
-        <div id="lectureinfo">
-          <div>
-            <h2>Sequoia Lecture Hall</h2>
-          </div>
-          <div>
-            <p>University grade, auditorium styled lecture hall</p>
-          </div>
-        </div>
-      </div>
-      <div id="lectureimg">
-        <span id="officeinfolecture">
-          The architectural design of 360 degree lecture hall is a flipped
-          traditional lecture hall with a circular shape.
-          <br />
-          Students seating stations are in a perfect circle regardless of which
-          type of furniture is used in new hall.
-          <br />
-          The teacher’s place is in the middle rather than at front.
-        </span>
-        <img src="weworkoffice.png" alt="classroom img" />
-      </div>
-      <div className="calendarcontainerinlecturepage">
-        <div id="calendarinlecturepage">
-          <div id="lectureavailabilitycontainer">
-            <span id="lectureavailability">Check availability now!</span>
-            <span id="lectureavailabilitydescription">
-              Use the calendar to select a timeframe and we will let you know if
-              it's available.
-            </span>
-            <span className="amenities">What this place offers</span>
-            <ul className="amenitieslist">
-              <li>room number: {rooms[0].name}</li>
-              <li>room type: {rooms[0].type}</li>
-              <li>room capicity: {rooms[0].capicity}</li>
-              <li>air condition? {rooms[0].aircondition}</li>
-              <li>zoom? {rooms[0].zoom}</li>
-              <li>board? {rooms[0].board}</li>
-            </ul>
-          </div>
-          <Ckre />
-        </div>
-      </div>
-
       <div id="lecturecancellation">
         <h3>Cancellation rules and company policy</h3>
         <ul>
@@ -166,7 +120,6 @@ function Lecture() {
           </li>
         </ul>
       </div>
-    </div>
     </div>
   );
 }

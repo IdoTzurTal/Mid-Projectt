@@ -1,0 +1,32 @@
+.enquiryform {
+    position: absolute;
+    z-index: 2;
+    bottom: 24vh;
+    left: 40vw;
+}
+.enquiryform input {
+    margin: 1vw;
+}
+
+#enquirysend {
+    background-color: rgb(37, 29, 29);
+    margin: 2vw;
+    padding: 1vw;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    border-style: none;
+}
+.enquiryform h3 {
+    margin-left: 6vw;
+}
+
+@media screen and (max-width: 412px) {
+    .enquiryform {
+        position: absolute;
+        z-index: 2;
+        bottom: 4vh;
+        left: 15vw;
+        right: 17vw;
+    }
+}

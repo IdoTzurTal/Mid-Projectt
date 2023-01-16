@@ -34,6 +34,7 @@
   display: flex;
   flex-direction: column;
   padding-right: 54vw;
+  padding-left: 5vw;
 }
 
 #officeinfoclass3 {

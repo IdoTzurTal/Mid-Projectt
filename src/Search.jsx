@@ -219,12 +219,14 @@ export default function Search() {
         </Box>
         </div>
       <h1>Our Facilities</h1>
+        <div className="searchtop">
       <select name="roomtype" onChange={(e) => {Fun5(e.target.value)}}>
         <option value="">Filter By Room Type</option>
         <option value="Lecture Hall">Lecture Hall</option>
         <option value="Meeting Room">Meeting Room</option>
         <option value="Classroom">Classroom</option>
       </select>
+      
       <input
         type="number"
         placeholder="Capacity"
@@ -247,16 +249,17 @@ export default function Search() {
         onChange={(e) => Fun(e, "yes")}
       />
       <button onClick={(e) => window.location.reload(false)}>Reset</button>
+      </div>
       {rooms.map((single, index) => {
         roomsingle.push(single.name);
         return (
           <div className="buyasearch">
             <p key={index}>
-              <h4> name: {single.name}</h4>
+              <h4>{single.name}</h4>
               <br />
               Room Type: {single.type}
               <br />
-              Capacity:{single.capacity}
+              Capacity: {single.capacity}
               <br />
               Zoom: {single.zoom}
               <br />

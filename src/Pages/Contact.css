@@ -1,6 +1,7 @@
 .contactnav a {
     text-decoration: none;
     color: white;
+    
 }
 .contactnav {
     background-color: rgb(37, 29, 29);
@@ -21,9 +22,9 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: absolute;
     z-index: 2;
-    bottom: 62%;
-    left: 40%;
-    text-shadow: 1px 1px 5px  black;
+    bottom: 62vh;
+    left: 40vw;
+    text-shadow: 1px 1px 5px white;
 }
 
 .content {
@@ -41,20 +42,43 @@
     font-weight: 500;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-right: 2vw;
-    padding-left: 3vw;
     position: absolute;
     z-index: 2;
-    bottom: 50%;
-    left: 20%;
-    text-shadow: 1px 1px 5px  black;
+    bottom: 50vh;
+    left: 20vw;
+    text-shadow: 1px 1px 5px white;
 }
 @media screen and (max-width: 412px) {
     #officecomms {
     position: relative;
     z-index: 1;
-    width: 358vw;
+    width: 363vw;
     opacity: 58%;
-    right: 116%;
+    right: 100vw;
+    }
+    #contactdetails {
+        font-style: italic;
+        color: black;
+        font-size: x-large;
+        font-weight: 500;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-left: 3vw;
+        position: absolute;
+        z-index: 2;
+        bottom: 26vh;
+        left: 18vw;
+        text-shadow: 1px 1px 5px white;
+        width: 54vw;
+    }
+    #wedlove {
+        color: black;
+        font-size: xx-large;
+        font-weight: 600;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        position: absolute;
+        z-index: 2;
+        bottom: 63vh;
+        left: 0vw;
+        text-shadow: 1px 1px 5px white;
     }
   }
-  /* לא הבנתי למה זה לא עבד כוסעמק */

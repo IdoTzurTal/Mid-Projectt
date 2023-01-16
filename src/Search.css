@@ -7,5 +7,71 @@
     width: 100vw;
 }
 .buyasearch button {
-    background-color: black;
+    background-color: rgb(37, 29, 29);
+    margin: 2vw;
+    padding: 1vw;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    border-style: none;
+}
+.buyasearch button:hover {
+    background-color: gray;
+    color: rgb(62, 50, 50);
+}
+.buyasearch p {
+    font-style: italic;
+}
+.searchtop {
+    display: contents;
+}
+.searchtop select {
+    margin: 1vw;
+    padding: 0.5vw;
+}
+.searchtop input {
+    margin: 1vw;
+    padding: 0.5vw;
+}
+.searchtop button {
+    margin: 1vw;
+    padding: 0.5vw;
+    font-weight: 600;
+    font-size: medium;
+    background-color: rgb(37, 29, 29);
+    color: white;
+    border-style: none;
+}
+.searchtop button:hover {
+    background-color: gray;
+    color: rgb(62, 50, 50);
+}
+.buyasearch p h4 {
+    font-size: x-large;
+}
+@media screen and (max-width: 412px) {
+    .buyasearch button {
+        background-color: rgb(37, 29, 29);
+        margin: 2vw;
+        padding: 2vw;
+        color: white;
+        font-size: large;
+        font-weight: 100;
+        border-style: none;
+    }
+    .searchtop button {
+        margin: 1vw;
+        padding: 1.5vw;
+        font-weight: 100;
+        font-size: medium;
+        background-color: rgb(37, 29, 29);
+        color: white;
+        border-style: none;
+    }
+    .buyasearch p {
+        font-weight: 500;
+    }
+    .buyasearch p h4 {
+        font-size: x-large;
+    }
 }

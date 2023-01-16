@@ -120,6 +120,10 @@
     color: white;
     background-color: rgb(62, 50, 50);
   }
+  #roombutton a {
+    text-decoration: none;
+    color: white;
+  }
 
   #roombutton:hover {
     background-color: gray;

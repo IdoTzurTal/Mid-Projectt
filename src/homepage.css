@@ -37,6 +37,19 @@
   height: 50px;
   color: rgb(3, 3, 3);
 }
+.companyfront {
+  padding-top: 2vh;
+}
+.companyfront h5 {
+  font-style: italic;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  font-family: math;
+}
+#vacancy {
+  text-align: center;
+}
 
 @media screen and (max-width: 412px) {
   #mainhomeimg {
@@ -53,7 +66,7 @@
     align-items: flex-start;
     width: 50vw;
     flex-direction: column;
-    padding-top: 3vh;
+    justify-content: space-around;
   }
   #info {
     width: 123vw;

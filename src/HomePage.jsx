@@ -65,25 +65,46 @@ function HomePage() {
         </Tabs>
       </Box>
       <div id="mainhomeimg"></div>
-      <div>
-        <h2>Corona Statistics:</h2>
-        <h4>sickness </h4>
+      <div id="flexendhome">
+        <div id="flexicons">
+          <a href="https://he-il.facebook.com/" target="_blank">
+            <FaFacebookSquare className="icons" />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <FaInstagramSquare className="icons" />
+          </a>
+          <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+            <FaMailBulk className="icons" />
+          </a>
+        </div>
+        <div id="info">
+          <p>
+            Officeworks is a provider of coworking spaces, including physical and virtual shared spaces, headquartered in New York City. As of December 31, 2021, the company operated 44.8 million square feet (4,160,000 m2) of space, including 19.8 million square feet (1,840,000 m2) in the United States and Canada, in 756 locations in 38 countries, and had 590,000 members, with a weighted average commitment term of 20 months.
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div className="companyfront">
+        <h5>"We make sure to sanitize and maintain our facilities regularly.<br />
+          Please make sure you are Covid-negative when booking one of our rooms."<br />
+          Ido Tzur Tal, CEO<br /> Officeworks </h5>
+        <h2>Daily Corona Statistics:</h2>
         <p>
-          <span>isolation: </span>
+          <span>Currently Quarantined: </span>
           <span>{covidData?.response[0].cases.active + " "}</span>
-          <span>Difficult situation: </span>
+          <span>| Critical Condition: </span>
           <span>{covidData?.response[0].cases.critical + " "}</span>
-          <span>new: </span>
+          <span>| Confirmed Cases (Today): </span>
           <span>{covidData?.response[0].cases.new + " "}</span>
         </p>
-        <h4>deathes</h4>
+        <h4>Death Toll (Since March 2020)</h4>
         <p>
-          <span>deathes: </span>
           <span>{covidData?.response[0].deaths.total + " "}</span>
         </p>
       </div>
       <hr></hr>
       <div>
+        <h3 id="vacancy">Current Vacancy:</h3>
         {rooms.map((item) => (
           <div>
             <p>{item.name}</p>
@@ -114,28 +135,6 @@ function HomePage() {
             <p>{rooms[roomid].day2[index].selected[0]}</p>
           </div>
         }} */}
-      </div>
-      <div id="flexendhome">
-        <div id="flexicons">
-          <a href="https://he-il.facebook.com/" target="_blank">
-            <FaFacebookSquare className="icons" />
-          </a>
-          <a href="https://www.instagram.com/" target="_blank">
-            <FaInstagramSquare className="icons" />
-          </a>
-          <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
-            <FaMailBulk className="icons" />
-          </a>
-        </div>
-        <div id="info">
-          <p>
-            CYBERPRO Global is a world-class cyber education and training
-            provider. We’ll support you in every stage of the process, from
-            selecting the proper training program, to customizing it to fit your
-            organization’s needs, and finally to facilitating the training in a
-            unique and hands-on environment.
-          </p>
-        </div>
       </div>
       <div>
         <div class="mapouter">

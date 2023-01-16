@@ -1,3 +1,4 @@
+import "./ContactAfterLogin.css"
 import { NavLink } from "react-router-dom";
 import { Tab } from "@mui/material";
 import { Box } from "@mui/system";
@@ -65,11 +66,13 @@ function Contact() {
         </Box>
         </div>
       <div id="content">
+        <div>
         <img
           id="officecomms"
           src="OfficeCommunication-1.jpg"
           alt="image unavailable"
         />
+        </div>
         <div class="wedlovecontain">
           <h6 id="wedlove">We'd love to hear from you!</h6>
         </div>
@@ -82,30 +85,34 @@ function Contact() {
             107-31265 Wheel Ave. Abbotsford, BC, V2T 6H2 Canada (+1) 555 3215
             (Free international calls!)
           </p>
-          {/* להוסיף אופציה לשליחת מייל עם ספריית mail.js */}
         </div>
+        <div className="enquiryform">
         <form onSubmit={handleSubmit}>
+          <h3>Send our team an enquiry:</h3>
+          <div>
           <select
             name="company"
             id="company"
             onChange={(e) => setRequest(e.target.value)}
           >
-            <option value="selectreasson">select reasson</option>
-            <option value="call it">call it</option>
-            <option value="meetingroom">meeting room</option>
+            <option value="selectreasson">What Is Your Enquiry?</option>
+            <option value="call it">Join Waiting List</option>
+            <option value="meetingroom">Ask To Book Meeting Room</option>
           </select>
           <input
             type="text"
-            placeholder="user name"
+            placeholder="What Is Your Username?"
             onChange={(e) => setUserRequest(e.target.value)}
           />
-          <input
+          </div>
+          <input id="enquirydetails"
             type="text"
-            placeholder="Detail"
+            placeholder="Enquiry Details"
             onChange={(e) => setDetail(e.target.value)}
           />
-          <input type="submit" value={"send to admin"} />
+          <input id="enquirysend" type="submit" value={"Send To Admin"} />
         </form>
+        </div>
       </div>
     </div>
   );

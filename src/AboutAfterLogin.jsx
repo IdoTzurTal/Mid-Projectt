@@ -1,3 +1,4 @@
+import "./AboutAfterLogin.css"
 import { NavLink } from "react-router-dom";
 import { Tab } from "@mui/material";
 import LogIn from "./LogIn";
@@ -29,7 +30,7 @@ function Contact() {
     console.log(requests);
   }
   return (
-    <div>
+    <div className="abuyacontain">
         <div>
         <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
           <Tabs className="contactnav" centered>
