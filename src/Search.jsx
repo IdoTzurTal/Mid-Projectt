@@ -1,19 +1,30 @@
-import { useEffect, useState } from "react";
-import { useContext } from "react";
-import { Detail } from "./Context";
+import {  useState } from "react";
 import Context from "./Context";
 import { Children } from "react";
 import { Navigate, useNavigate } from "react-router";
-import { NavLink } from "react-router-dom";
-import { Tab } from "@mui/material";
+import * as React from "react";
+import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
-import { Box } from "@mui/system";
-import HomePage from './HomePage'
-import About from './Pages/About'
-import Contact from './Pages/Contact'
-import LogIn from './LogIn'
+import Tab from "@mui/material/Tab";
+import "./HomeAfterLogin.css";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaMailBulk } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import Meeting from "./Meeting";
+import Class from "./Class";
+import Lecture from "./Lecture";
+import Contact from "./Pages/Contact";
+import About from "./Pages/About";
+import HomeAfterLogin from "./HomeAfterLogin";
+import Favoritepage from "./Favorite";
+import Admin from "./Admin";
+import { Detail } from "./Context";
+import { useContext } from "react";
+import { useEffect } from "react";
 import Rooms from "./Rooms";
 import './Search.css'
+
 
 export default function Search() {
   const navigate = useNavigate();
@@ -156,19 +167,45 @@ export default function Search() {
         break;
     }
   }
-
   let roomsingle = [];
   return (
     <div>
-                  <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-                <Tabs className="contactnav" centered>
-                    <NavLink to='/Home' element={<HomePage />} > <Tab label="cyber pro" /></NavLink>
-                    <NavLink to='/Rooms' element={<Rooms />}> <Tab label="Rooms" /></NavLink>
-                    <NavLink to='/About' element={<About />} > <Tab label="about" /></NavLink>
-                    <NavLink to='/Contact' element={<Contact />} > <Tab label="contact" /></NavLink>
-                    <NavLink to='/Login' element={<LogIn />}> <Tab label="log in" /></NavLink>
-                </Tabs>
-            </Box>
+         <div>
+        <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+          <Tabs className="hometabs" centered>
+            <NavLink to="/HomeAfterLogin" element={<HomeAfterLogin />}>
+              {" "}
+              <Tab label="Home" />
+            </NavLink>
+            <NavLink to="/Rooms" element={<Rooms />}>
+              {" "}
+              <Tab label="our rooms" />
+            </NavLink>
+            <NavLink to="/About" element={<About />}>
+              {" "}
+              <Tab label="about" />
+            </NavLink>
+            <NavLink to="/Contact" element={<Contact />}>
+              {" "}
+              <Tab label="contact" />
+            </NavLink>
+            <NavLink to="/Search" element={<Search />}>
+              {" "}
+              <Tab label="search" />
+            </NavLink>
+            <NavLink to="/Favoritepage" element={<Favoritepage />}>
+              {" "}
+              <Tab label="favorite" />
+            </NavLink>
+            {/* {user == "Admin" && ( */}
+              <NavLink to="/Admin" element={<Admin />}>
+                {" "}
+                <Tab label="Admin" />
+              </NavLink>
+            {/* )} */}
+          </Tabs>
+        </Box>
+        </div>
       <h1>Our Facilities</h1>
       <select name="roomtype" onChange={(e) => {Fun5(e.target.value)}}>
         <option value="">Filter By Room Type</option>
