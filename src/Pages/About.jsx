@@ -14,7 +14,7 @@ function About() {
         <div>
         <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
         <Tabs className="aboutnav" centered>
-          <NavLink to='/Home' element={<HomePage/>} > <Tab label="cyber pro" /></NavLink>
+          <NavLink to='/Home' element={<HomePage/>} > <Tab label="Home" /></NavLink>
           <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
           <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
           <NavLink to='/Login' element={<LogIn/>}> <Tab label="log in" /></NavLink>

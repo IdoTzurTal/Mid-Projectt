@@ -7,31 +7,59 @@ import Ckre from "./Calendar"
 import { NavLink } from "react-router-dom";
 import { Tab, Tabs, Box } from "@mui/material";
 import HomePage from "./HomePage";
-import Contact from "./Pages/Contact";
+import AboutAfterLogin from "./AboutAfterLogin"
+import ContactAfterLogin from "./ContactAfterLogin"
 import LogIn from "./LogIn";
-import About from "./Pages/About";
 import Class from "./Class";
 import Meeting from "./Meeting";
 import { Detail } from "./Context";
+import HomeAfterLogin from "./HomeAfterLogin";
+import Search from "./Search";
+import Favoritepage from "./Favorite";
+import Admin from "./Admin";
+import Rooms from "./Rooms";
 
 function Lecture3() {
     // const value = useContext(CalendarApi)
     const {rooms, setrooms} = useContext(Detail);
     return (
         <div>
-            <div>
-                <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-                    <Tabs className="contactnav" centered>
-                        <NavLink to='/Home' element={<HomePage />} > <Tab label="cyber pro" /></NavLink>
-                        <NavLink to='/Meetingroom' element={<Meeting />}> <Tab label="meeting rooms" /></NavLink>
-                        <NavLink to='/Lectureroom' element={<Lecture3 />}> <Tab label="lecture rooms" /></NavLink>
-                        <NavLink to='/Classroom' element={<Class />}> <Tab label="classrooms" /></NavLink>
-                        <NavLink to='/About' element={<About />} > <Tab label="about" /></NavLink>
-                        <NavLink to='/Contact' element={<Contact />} > <Tab label="contact" /></NavLink>
-                        <NavLink to='/Login' element={<LogIn />}> <Tab label="log in" /></NavLink>
-                    </Tabs>
-                </Box>
-            </div>
+        <div>
+        <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+          <Tabs className="contactnav" centered>
+            <NavLink to="/HomeAfterLogin" element={<HomeAfterLogin />}>
+              {" "}
+              <Tab label="Home" />
+            </NavLink>
+            <NavLink to="/Rooms" element={<Rooms />}>
+              {" "}
+              <Tab label="our rooms" />
+            </NavLink>
+            <NavLink to="/Aboutafterlogin" element={<AboutAfterLogin />}>
+              {" "}
+              <Tab label="about" />
+            </NavLink>
+            <NavLink to="/Contactafterlogin" element={<ContactAfterLogin />}>
+              {" "}
+              <Tab label="contact" />
+            </NavLink>
+            <NavLink to="/Search" element={<Search />}>
+              {" "}
+              <Tab label="search" />
+            </NavLink>
+            <NavLink to="/Favoritepage" element={<Favoritepage />}>
+              {" "}
+              <Tab label="favorite" />
+            </NavLink>
+            {/* {user == "Admin" && ( */}
+              <NavLink to="/Admin" element={<Admin />}>
+                {" "}
+                <Tab label="Admin" />
+              </NavLink>
+            {/* )} */}
+          </Tabs>
+        </Box>
+        </div>
             <div id="fleximgdescriptionlecture">
                 <div id="lectureinfo">
                     <div>

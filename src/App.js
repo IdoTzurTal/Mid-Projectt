@@ -23,6 +23,9 @@ import Rooms from "./Rooms";
 import Admin from "./Admin";
 import Error from "./Error"
 import Favoritepage from "./Favorite";
+import AboutAfterLogin from "./AboutAfterLogin"
+import ContactAfterLogin from "./ContactAfterLogin"
+
 function App() {
   // const CalendarApi = createContext()
 
@@ -34,7 +37,9 @@ function App() {
         <Route path="/HomeAfterLogin" element={<HomeAfterLogin />}></Route>
         <Route path="/Login" element={<Login />}></Route>
         <Route path='/About' element={<About />}></Route>
+        <Route path='/AboutAfterLogin' element={<AboutAfterLogin />}></Route>
         <Route path='/Contact' element={<Contact />}></Route>
+        <Route path='/ContactAfterLogin' element={<ContactAfterLogin />}></Route>
         <Route path='/Classroom' element={<Class />}></Route>
         <Route path='/Lectureroom' element={<Lecture />}></Route>
         <Route path='/Meetingroom' element={<Meeting/>}></Route>

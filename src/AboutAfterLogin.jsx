@@ -1,15 +1,17 @@
 import { NavLink } from "react-router-dom";
 import { Tab } from "@mui/material";
+import LogIn from "./LogIn";
 import { Box } from "@mui/system";
 import Tabs from "@mui/material/Tabs";
 import { useState } from "react";
 import HomeAfterLogin from "./HomeAfterLogin";
-import Search from "./Search";
-import Favoritepage from "./Favorite";
-import Admin from "./Admin";
 import Rooms from "./Rooms";
 import AboutAfterLogin from "./AboutAfterLogin"
 import ContactAfterLogin from "./ContactAfterLogin"
+import Admin from "./Admin";
+import Search from "./Search";
+import Favoritepage from "./Favorite";
+
 
 function Contact() {
   const [request, setRequest] = useState();
@@ -54,56 +56,32 @@ function Contact() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
+            {/* {user == "Admin" && ( */}
               <NavLink to="/Admin" element={<Admin />}>
                 {" "}
                 <Tab label="Admin" />
               </NavLink>
+            {/* )} */}
           </Tabs>
         </Box>
         </div>
-      <div id="content">
-        <img
-          id="officecomms"
-          src="OfficeCommunication-1.jpg"
-          alt="image unavailable"
-        />
-        <div class="wedlovecontain">
-          <h6 id="wedlove">We'd love to hear from you!</h6>
+        <div class="container">
+            <div>
+                <img id="officeimg" src="/office image for about.jpeg" alt="image unavailable" />
+            </div>
+            <span id="officeworks">
+
+                Officeworks is the world’s biggest office lease and booking platform. You might know us from our world-class
+                facilities, our supportive community, or our awesome Officeworks utilities.<br/>
+
+                We collaborate with the world's finest companies to bring the forefront of easy office booking right to the palm of your hand.<br/>
+                Officeworks gives your business the commercial office space solutions it needs – minus the headaches of upfront capital and lengthy leases.<br/>
+                That’s why more than 50% of Fortune 100 companies are WeWork members.<br/>
+
+                On top of that, imagine accomodating in some of the best equipped facilities in the world, while also gaining access to said companies' office perks and features. That's Officeworks.<br/>
+                Create a workplace that meets all your business requirements with your pick of Grade A buildings, branding, security, IT and more.
+            </span>
         </div>
-        <div class="contactdetailscontain">
-          <p id="contactdetails">
-            Whether your question is about membership, leasing our facilities,
-            technical problems or anything else,
-            <br /> our amazing support team is ready to answer any and all of
-            your questions! <br />
-            107-31265 Wheel Ave. Abbotsford, BC, V2T 6H2 Canada (+1) 555 3215
-            (Free international calls!)
-          </p>
-          {/* להוסיף אופציה לשליחת מייל עם ספריית mail.js */}
-        </div>
-        <form onSubmit={handleSubmit}>
-          <select
-            name="company"
-            id="company"
-            onChange={(e) => setRequest(e.target.value)}
-          >
-            <option value="selectreasson">select reasson</option>
-            <option value="callit">call it</option>
-            <option value="meetingroom">meeting room</option>
-          </select>
-          <input
-            type="text"
-            placeholder="user name"
-            onChange={(e) => setUserRequest(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Detail"
-            onChange={(e) => setDetail(e.target.value)}
-          />
-          <input type="submit" value={"send to admin"} />
-        </form>
-      </div>
     </div>
   );
 }
