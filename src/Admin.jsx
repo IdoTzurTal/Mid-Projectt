@@ -74,9 +74,6 @@ function Admin() {
           </div>);
 
         })}
-
-
-
     </div>
   );
 }

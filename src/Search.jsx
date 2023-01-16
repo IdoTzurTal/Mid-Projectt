@@ -27,6 +27,8 @@ import './Search.css'
 
 
 export default function Search() {
+  const { user, setuser } = useContext(Detail);
+  setuser(localStorage.getItem("user"));
   const navigate = useNavigate();
 
   const [typecheck, settypechek] = useState();
@@ -197,12 +199,11 @@ export default function Search() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            {/* {user == "Admin" && ( */}
+            { user == '"Admin"' && (
               <NavLink to="/Admin" element={<Admin />}>
-                {" "}
                 <Tab label="Admin" />
               </NavLink>
-            {/* )} */}
+            )} 
           </Tabs>
         </Box>
         </div>

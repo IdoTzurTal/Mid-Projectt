@@ -19,6 +19,8 @@ import Admin from "./Admin";
 
 function Lecture() {
     // const value = useContext(CalendarApi)
+    const { user, setuser } = useContext(Detail);
+    setuser(localStorage.getItem("user"));
     const {rooms, setrooms} = useContext(Detail);
     
     return (
@@ -50,12 +52,11 @@ function Lecture() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            {/* {user == "Admin" && ( */}
+            { user == '"Admin"' && (
               <NavLink to="/Admin" element={<Admin />}>
-                {" "}
                 <Tab label="Admin" />
               </NavLink>
-            {/* )} */}
+            )} 
           </Tabs>
         </Box>
         </div>

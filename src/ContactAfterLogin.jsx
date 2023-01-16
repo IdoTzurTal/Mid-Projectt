@@ -13,7 +13,8 @@ import ContactAfterLogin from "./ContactAfterLogin"
 import { Detail } from "./Context";
 
 function Contact() {
-  
+  const { user, setuser } = useContext(Detail);
+  setuser(localStorage.getItem("user"));
   const [request, setRequest] = useState();
   const {userRequest, setUserRequest} = useContext(Detail);
   const [detail, setDetail] = useState();
@@ -55,10 +56,11 @@ function Contact() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
+            { user == '"Admin"' && (
               <NavLink to="/Admin" element={<Admin />}>
-                {" "}
                 <Tab label="Admin" />
               </NavLink>
+            )} 
           </Tabs>
         </Box>
         </div>
