@@ -1,5 +1,7 @@
 import { useState } from "react";
 import './Login.css';
+import { Navigate , usenavigate } from "react-router-dom";
+import HomeAfterLogin from "./HomeAfterLogin";
 export default function LogIn() {
   const [password, setpassword] = useState();
   const [company, setcompany] = useState();
@@ -11,7 +13,8 @@ export default function LogIn() {
     e.preventDefault();
     if (user === "Admin" && password === "1234" && company === "cyberpro") {
       setuser(user);
-      // navigate("."); לעבור לדף הראשי
+      Navigate("/HomeAfterLogin"); 
+      alert("ssadd")
     }
     else if (user === "Lecturer" && password === "1234" && company === "cyberpro") {
       setuser(user);

@@ -84,6 +84,7 @@ export default function Ckre() {
         selected: [...array],
     }])
     console.log(meeting , "hello");
+   
   }
 
   const handleClick = (e) => {
