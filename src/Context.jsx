@@ -123,7 +123,7 @@ function Context({ children }) {
 
   return (
 
-    <Detail.Provider value={{ rooms, setrooms, meeting, setmeeting , favorite,setfavorite,user, setuser, roomid, setroomid ,requests, setRequests}}>{children}</Detail.Provider>
+    <Detail.Provider value={{ rooms, setrooms, meeting, setmeeting , favorite,setfavorite,user, setuser, roomid, setroomid ,requests, setRequests , userRequest, setUserRequest}}>{children}</Detail.Provider>
     
 
   );

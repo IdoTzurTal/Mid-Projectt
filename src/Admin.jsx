@@ -66,9 +66,11 @@ function Admin() {
         {requests?.map((single, index) => {
           return(
           <div key={index}>
+            <p> user: {single.userName}</p>
             <p>
              tag: {single.tag}</p>
              <p> details: {single.details}</p>
+             
             <hr />
 
           </div>);
