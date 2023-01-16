@@ -23,6 +23,7 @@ export default function Ckre() {
     console.log("useeffect", rooms[roomid]);
     console.log("useeffect", rooms[roomid]?.day2);
     console.log(day);
+
     rooms[roomid]?.day2.shift(day);
     rooms[roomid]?.day2.push(day);
 
