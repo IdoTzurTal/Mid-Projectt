@@ -34,17 +34,18 @@ export default function LogIn() {
   }
 
   return (
+    <div className="buyalogin">
     <div className="login">
       <div className="loginform">
-        <h1>log in</h1>
+        <h1>Log In</h1>
         <form onSubmit={handleSubmit}>
           <select
-            name="company"
+            name="Company"
             id="company"
             onChange={(e) => setcompany(e.target.value)}
           >
-            <option value="selectcompany">select company</option>
-            <option value="cyberpro">cyberpro</option>
+            <option value="selectcompany">Select Company</option>
+            <option value="cyberpro">CyberPro</option>
             <option value="company2">company 2</option>
             <option value="company3">company 3</option>
             <option value="company4">company 4</option>
@@ -52,17 +53,18 @@ export default function LogIn() {
           </select>
           <input
             type="text"
-            placeholder="user name"
+            placeholder="Username"
             onChange={(e) => setuser(e.target.value)}
           />
           <input
             type="password"
-            placeholder="password"
+            placeholder="Password"
             onChange={(e) => setpassword(e.target.value)}
           />
           <input type="submit" value={"log in"} onSubmit={(e)=>handleSubmit(e)} />
         </form>
       </div>
+    </div>
     </div>
   );
 }

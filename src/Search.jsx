@@ -23,8 +23,7 @@ import { Detail } from "./Context";
 import { useContext } from "react";
 import { useEffect } from "react";
 import Rooms from "./Rooms";
-
-
+import './Search.css'
 
 
 export default function Search() {
@@ -240,7 +239,7 @@ export default function Search() {
         roomsingle.push(single.name);
     
         return (
-          <div>
+          <div className="buyasearch">
             <p key={index}>
               <h4> name: {single.name}</h4>
               <br />
