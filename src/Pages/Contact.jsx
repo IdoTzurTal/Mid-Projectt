@@ -29,7 +29,7 @@ function Contact() {
        <div><div>
         <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
         <Tabs className="contactnav" centered>
-          <NavLink to='/Home' element={<HomePage/>} > <Tab label="Home" /></NavLink>
+          <NavLink to='/' element={<HomePage/>} > <Tab label="Home" /></NavLink>
           <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
           <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
           <NavLink to='/Login' element={<LogIn/>}> <Tab label="log in" /></NavLink>

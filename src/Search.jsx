@@ -195,7 +195,10 @@ export default function Search() {
               {" "}
               <Tab label="search" />
             </NavLink>
-            <NavLink to="/Favoritepage" element={<Favoritepage />}>
+            <NavLink  onClick={() => {
+                  localStorage.setItem('favorite',JSON.stringify(favorite) );
+                  JSON.parse(favorite)}}                 
+                  to="/Favoritepage" element={<Favoritepage />} >
               {" "}
               <Tab label="favorite" />
             </NavLink>
