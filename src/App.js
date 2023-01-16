@@ -22,6 +22,9 @@ import Context from "./Context";
 import Rooms from "./Rooms";
 import Admin from "./Admin";
 import Error from "./Error"
+import Favoritepage from "./Favorite";
+import AboutAfterLogin from "./AboutAfterLogin"
+import ContactAfterLogin from "./ContactAfterLogin"
 
 function App() {
   // const CalendarApi = createContext()
@@ -31,10 +34,12 @@ function App() {
       <Context>
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/Home" element={<HomePage />}></Route>
+        <Route path="/HomeAfterLogin" element={<HomeAfterLogin />}></Route>
         <Route path="/Login" element={<Login />}></Route>
         <Route path='/About' element={<About />}></Route>
+        <Route path='/AboutAfterLogin' element={<AboutAfterLogin />}></Route>
         <Route path='/Contact' element={<Contact />}></Route>
+        <Route path='/ContactAfterLogin' element={<ContactAfterLogin />}></Route>
         <Route path='/Classroom' element={<Class />}></Route>
         <Route path='/Lectureroom' element={<Lecture />}></Route>
         <Route path='/Meetingroom' element={<Meeting/>}></Route>
@@ -47,7 +52,9 @@ function App() {
         <Route path='/Meeting3' element={<Meeting3 />}></Route>
         <Route path='/Rooms' element={<Rooms />}></Route>
         <Route path='/Admin' element={<Admin />}></Route>
+        <Route path='/Favoritepage' element={<Favoritepage />}></Route>
         <Route path='/*' element={<Error />}></Route>
+        <Route path='/Admin' element={<Admin />}></Route>
       </Routes>
       </Context>
     </div>

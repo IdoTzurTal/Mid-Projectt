@@ -1,43 +1,51 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import './Login.css';
+import { Navigate , useNavigate } from "react-router-dom";
+import HomeAfterLogin from "./HomeAfterLogin";
+import { Detail } from "./Context";
 export default function LogIn() {
   const [password, setpassword] = useState();
   const [company, setcompany] = useState();
+  const Navigate = useNavigate();
   // המשתנה user צריך להיות בקונטקסט
-  const [user, setuser] = useState();
-
+  const {user, setuser} = useContext(Detail)
   function handleSubmit(e) {
-   
     e.preventDefault();
-    if (user === "Admin" && password === "1234" && company === "cyberpro") {
+    if (user == "Admin" && password == "1234" && company == "cyberpro") {
       setuser(user);
-      // navigate("."); לעבור לדף הראשי
+      Navigate("/HomeAfterLogin"); 
+      // alert("ssadd")
+      // console.log(user);
     }
     else if (user === "Lecturer" && password === "1234" && company === "cyberpro") {
       setuser(user);
-      // navigate("./main"); לעבור לדף הראשי
+      Navigate("/HomeAfterLogin");
     }
     else if (user === "Teacher" && password === "1234" && company === "cyberpro") {
       setuser(user);
-      // navigate("./main"); לעבור לדף הראשי
+      Navigate("/HomeAfterLogin");
     }  
     else {
       alert("Account doesn't exist")
     }
+
+    localStorage.setItem('user',JSON.stringify(user) );
+    JSON.parse(user)
   }
 
   return (
+    <div className="buyalogin">
     <div className="login">
       <div className="loginform">
-        <h1>log in</h1>
+        <h1>Log In</h1>
         <form onSubmit={handleSubmit}>
           <select
-            name="company"
+            name="Company"
             id="company"
             onChange={(e) => setcompany(e.target.value)}
           >
-            <option value="selectcompany">select company</option>
-            <option value="cyberpro">cyberpro</option>
+            <option value="selectcompany">Select Company</option>
+            <option value="cyberpro">CyberPro</option>
             <option value="company2">company 2</option>
             <option value="company3">company 3</option>
             <option value="company4">company 4</option>
@@ -45,17 +53,18 @@ export default function LogIn() {
           </select>
           <input
             type="text"
-            placeholder="user name"
+            placeholder="Username"
             onChange={(e) => setuser(e.target.value)}
           />
           <input
             type="password"
-            placeholder="password"
+            placeholder="Password"
             onChange={(e) => setpassword(e.target.value)}
           />
-          <input type="submit" value={"log in"} />
+          <input type="submit" value={"log in"} onSubmit={(e)=>handleSubmit(e)} />
         </form>
       </div>
+    </div>
     </div>
   );
 }

@@ -7,29 +7,58 @@ import Ckre from "./Calendar"
 import { NavLink } from "react-router-dom";
 import { Tab, Tabs, Box } from "@mui/material";
 import HomePage from "./HomePage";
-import Contact from "./Pages/Contact";
+import AboutAfterLogin from "./AboutAfterLogin"
+import ContactAfterLogin from "./ContactAfterLogin"
 import LogIn from "./LogIn";
-import About from "./Pages/About";
 import Class from "./Class";
 import Rooms from "./Rooms";
 import { Detail } from "./Context";
+import HomeAfterLogin from "./HomeAfterLogin";
+import Search from "./Search";
+import Favoritepage from "./Favorite";
+import Admin from "./Admin";
 
 function Meeting() {
     // const value = useContext(CalendarApi)
     const {rooms, setrooms} = useContext(Detail);
     return (
         <div>
-            <div>
-                <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-                    <Tabs className="contactnav" centered>
-                        <NavLink to='/Home' element={<HomePage />} > <Tab label="cyber pro" /></NavLink>
-                        <NavLink to='/Rooms' element={<Rooms />}> <Tab label="Rooms" /></NavLink>
-                        <NavLink to='/About' element={<About />} > <Tab label="about" /></NavLink>
-                        <NavLink to='/Contact' element={<Contact />} > <Tab label="contact" /></NavLink>
-                        <NavLink to='/Login' element={<LogIn />}> <Tab label="log in" /></NavLink>
-                    </Tabs>
-                </Box>
-            </div>
+        <div>
+        <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+          <Tabs className="contactnav" centered>
+            <NavLink to="/HomeAfterLogin" element={<HomeAfterLogin />}>
+              {" "}
+              <Tab label="Home" />
+            </NavLink>
+            <NavLink to="/Rooms" element={<Rooms />}>
+              {" "}
+              <Tab label="our rooms" />
+            </NavLink>
+            <NavLink to="/Aboutafterlogin" element={<AboutAfterLogin />}>
+              {" "}
+              <Tab label="about" />
+            </NavLink>
+            <NavLink to="/Contactafterlogin" element={<ContactAfterLogin />}>
+              {" "}
+              <Tab label="contact" />
+            </NavLink>
+            <NavLink to="/Search" element={<Search />}>
+              {" "}
+              <Tab label="search" />
+            </NavLink>
+            <NavLink to="/Favoritepage" element={<Favoritepage />}>
+              {" "}
+              <Tab label="favorite" />
+            </NavLink>
+            {/* {user == "Admin" && ( */}
+              <NavLink to="/Admin" element={<Admin />}>
+                {" "}
+                <Tab label="Admin" />
+              </NavLink>
+            {/* )} */}
+          </Tabs>
+        </Box>
+        </div>
             <div id="fleximgdescriptionmeeting">
                 <div id="meetinginfo">
                     <div>
@@ -60,12 +89,12 @@ function Meeting() {
                         <span id="meetingavailabilitydescription">Use the calendar to select a timeframe and we will let you know if it's available.</span>
                         <span className="amenities">What this place offers</span>
                         <ul className="amenitieslist">
-                        <li>room number: {rooms[6].name}</li>
-                            <li>room type: {rooms[6].type}</li>
-                            <li>room capicity: {rooms[6].capicity}</li>
-                            <li>air condition? {rooms[6].aircondition}</li>
-                            <li>zoom? {rooms[6].zoom}</li>
-                            <li>board? {rooms[6].board}</li>
+                        <li>Room Number: {rooms[6].name}</li>
+                            <li>Room Type: {rooms[6].type}</li>
+                            <li>Room Capacity: {rooms[6].capacity}</li>
+                            <li>Air Conditioning? {rooms[6].airconditioning}</li>
+                            <li>Zoom? {rooms[6].zoom}</li>
+                            <li>Whiteboard? {rooms[6].whiteboard}</li>
                         </ul>
                     </div>
                     <Ckre />

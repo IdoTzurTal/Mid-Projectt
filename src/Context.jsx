@@ -4,11 +4,13 @@ export const Detail = createContext();
 
 function Context({ children }) {
   const [roomid, setroomid] = useState();
+  const [favorite,setfavorite] =useState([{}])
+  const [user, setuser] = useState();
   const [rooms, setrooms] = useState([
     {
       id: 1,
       name: "room 1",
-      type: "conferenceHall",
+      type: "Lecture Hall",
       capacity: 150,
       airconditioning: "yes",
       projector: "yes",
@@ -20,7 +22,7 @@ function Context({ children }) {
     {
       id: 2,
       name: "room 2",
-      type: "conferenceHall",
+      type: "Lecture Hall",
       capacity: 200,
       airconditioning: "yes",
       projector: "no",
@@ -32,12 +34,12 @@ function Context({ children }) {
     {
       id: 3,
       name: "room 3",
-      type: "conferenceHall",
+      type: "Lecture Hall",
       capacity: 300,
       airconditioning: "yes",
       projector: "yes",
       zoom: "yes",
-      board: "no",
+      whiteboard: "no",
       favorite: false,
       day2: [],
     },
@@ -45,7 +47,7 @@ function Context({ children }) {
     {
       id: 4,
       name: "room 4",
-      type: "classes",
+      type: "Classroom",
       capacity: 25,
       airconditioning: "yes",
       projector: "yes",
@@ -57,7 +59,7 @@ function Context({ children }) {
     {
       id: 5,
       name: "room 5",
-      type: "classes",
+      type: "Classroom",
       capacity: 20,
       airconditioning: "no",
       projector: "no",
@@ -69,7 +71,7 @@ function Context({ children }) {
     {
       id: 6,
       name: "room 6",
-      type: "classes",
+      type: "Classroom",
       capacity: 35,
       airconditioning: "yes",
       projector: "no",
@@ -81,7 +83,7 @@ function Context({ children }) {
     {
       id: 7,
       name: "room 7",
-      type: "meetroom",
+      type: "Meeting Room",
       capacity: 15,
       airconditioning: "yes",
       projector: "yes",
@@ -93,7 +95,7 @@ function Context({ children }) {
     {
       id: 8,
       name: "room 8",
-      type: "meetroom",
+      type: "Meeting Room",
       capacity: 6,
       airconditioning: "no",
       projector: "no",
@@ -105,7 +107,7 @@ function Context({ children }) {
     {
       id: 9,
       name: "room 9",
-      type: "meetroom",
+      type: "Meeting Room",
       capacity: 10,
       airconditioning: "yes",
       projector: "no",
@@ -118,11 +120,8 @@ function Context({ children }) {
   const [meeting, setmeeting] = useState([]);
 
   return (
-    <Detail.Provider
-      value={{ rooms, setrooms, meeting, setmeeting, roomid, setroomid }}
-    >
-      {children}
-    </Detail.Provider>
+    <Detail.Provider value={{ rooms, setrooms, meeting, setmeeting , favorite,setfavorite,user, setuser, roomid, setroomid}}>{children}</Detail.Provider>
+    {children}
   );
 }
 

@@ -95,9 +95,10 @@ export default function Ckre() {
         monthnum: chose?.toString()?.slice(8, 10),
         year: chose?.toString()?.slice(11, 15),
         selected: [...array],
-      },
-    ]);
-    console.log(meeting, "hello");
+    }])
+    console.log(meeting , "hello");
+   
+
   }
 
   const handleClick = (e) => {

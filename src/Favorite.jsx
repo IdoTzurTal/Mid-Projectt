@@ -1,37 +1,23 @@
-import "./Admin.css";
 import { Box } from "@mui/system";
-import { Tab } from "@mui/material";
-import Tabs from "@mui/material/Tabs";
+import { Tabs } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import { Tab } from "@mui/material"
+import HomeAfterLogin from "./HomeAfterLogin";
+import Rooms from "./Rooms";
 import AboutAfterLogin from "./AboutAfterLogin"
 import ContactAfterLogin from "./ContactAfterLogin"
-import LogIn from "./LogIn";
-import Rooms from "./Rooms";
-import HomePage from "./HomePage";
-import { Detail } from "./Context";
-import { useContext, useState } from "react";
-import HomeAfterLogin from "./HomeAfterLogin";
 import Search from "./Search";
-import Favoritepage from "./Favorite";
+import Admin from "./Admin";
 
-function Admin() {
-  const { meeting, setmeeting } = useContext(Detail);
-  const { rooms, setrooms } = useContext(Detail);
-  const [favorite, setfavorite] = useState();
-   
-  
-    
-    // rooms.map((single, index) => {
-    //     if (single.favorite== true) {
-    //       favorite.push(single) 
-    //     }})
-    //     console.log(favorite);
-    
-    
-   
+
+
+export default function Favoritepage() {
+  let listfav = [{}];
+  listfav = JSON.parse(localStorage.getItem("favorite"));
+  console.log(listfav);
   return (
     <div>
-        <div>
+      <div>
         <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
           <Tabs className="contactnav" centered>
             <NavLink to="/HomeAfterLogin" element={<HomeAfterLogin />}>
@@ -58,19 +44,39 @@ function Admin() {
               {" "}
               <Tab label="favorite" />
             </NavLink>
-            {/* {user == "Admin" && ( */}
-              <NavLink to="/Admin" element={<Admin />}>
-                {" "}
-                <Tab label="Admin" />
-              </NavLink>
-            {/* )} */}
+            <NavLink to="/Admin" element={<Admin />}>
+              {" "}
+              <Tab label="Admin" />
+            </NavLink>
           </Tabs>
         </Box>
-        </div>
-      <h2>Welcome, Admin</h2>
-      <h4>Today's meetings</h4>
+      </div>
+      <h1>favorite rooms</h1>
+      {listfav.map((item, index) => {
+        if (index > 0) {
+          return (
+            <div>
+              <p key={index}>
+                <h4> name: {item?.single?.name}</h4>
+                <br />
+                Room Type: {item?.single?.type}
+                <br />
+                Capacity:{item?.single?.capacity}
+                <br />
+                Zoom: {item?.single?.zoom}
+                <br />
+                Air Conditioning: {item?.single?.airconditioning} <br />
+                Projector: {item?.single?.projector} <br />
+                Whiteboard: {item?.single?.whiteboard}
+                <br />
+                <br />
+                <hr />
+              </p>
+            </div>
+          );
+        }
+      })}
     </div>
   );
 }
 
-export default Admin;

@@ -10,25 +10,59 @@ import { NavLink } from "react-router-dom";
 import Meeting from "./Meeting";
 import Class from "./Class";
 import Lecture from "./Lecture";
-import Contact from "./Pages/Contact";
-import About from "./Pages/About";
+import AboutAfterLogin from "./AboutAfterLogin"
+import ContactAfterLogin from "./ContactAfterLogin"
 import HomePage from "./HomePage";
 import Search from "./Search";
-
+import Favoritepage from "./Favorite";
+import Admin from "./Admin";
+import { Detail } from "./Context";
+import { useContext } from "react";
+import { useEffect } from "react";
+import Rooms from "./Rooms";
 function HomeAfterLogin() {
+  const { user, setuser } = useContext(Detail);
+  setuser(localStorage.getItem("user"));
+  console.log(user);
+// useEffect(() => {
   return (
     <div>
-      <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-        <Tabs className="hometabs" centered>
-          <NavLink to='/Home' element={<HomePage/>} > <Tab label="cyber pro" /></NavLink>
-          <NavLink to='/Meetingroom' element={<Meeting />}> <Tab label="meeting rooms" /></NavLink>
-          <NavLink to='/Lectureroom' element={<Lecture />}> <Tab label="lecture rooms" /></NavLink>
-          <NavLink to='/Classroom' element={<Class/>} > <Tab label="classrooms" /></NavLink>
-          <NavLink to='/About' element={<About/>} > <Tab label="about" /></NavLink>
-          <NavLink to='/Contact' element={<Contact/>} > <Tab label="contact" /></NavLink>
-          <NavLink to='/Search' element={<Search/>}> <Tab label="search" /></NavLink>
-        </Tabs>
-      </Box>
+        <div>
+        <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+          <Tabs className="contactnav" centered>
+            <NavLink to="/HomeAfterLogin" element={<HomeAfterLogin />}>
+              {" "}
+              <Tab label="Home" />
+            </NavLink>
+            <NavLink to="/Rooms" element={<Rooms />}>
+              {" "}
+              <Tab label="our rooms" />
+            </NavLink>
+            <NavLink to="/Aboutafterlogin" element={<AboutAfterLogin />}>
+              {" "}
+              <Tab label="about" />
+            </NavLink>
+            <NavLink to="/Contactafterlogin" element={<ContactAfterLogin />}>
+              {" "}
+              <Tab label="contact" />
+            </NavLink>
+            <NavLink to="/Search" element={<Search />}>
+              {" "}
+              <Tab label="search" />
+            </NavLink>
+            <NavLink to="/Favoritepage" element={<Favoritepage />}>
+              {" "}
+              <Tab label="favorite" />
+            </NavLink>
+            {/* {user == "Admin" && ( */}
+              <NavLink to="/Admin" element={<Admin />}>
+                {" "}
+                <Tab label="Admin" />
+              </NavLink>
+            {/* )} */}
+          </Tabs>
+        </Box>
+        </div>
       <div id="mainhomeimg"></div>
       <div></div>
       <div id="flexendhome">
@@ -55,5 +89,7 @@ function HomeAfterLogin() {
       </div>
     </div>
   );
+
+// }, [user]);
 }
 export default HomeAfterLogin;

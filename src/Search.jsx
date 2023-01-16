@@ -1,15 +1,36 @@
-import { useEffect, useState } from "react";
-import { useContext } from "react";
-import { Detail } from "./Context";
+import {  useState } from "react";
 import Context from "./Context";
 import { Children } from "react";
 import { Navigate, useNavigate } from "react-router";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import "./HomeAfterLogin.css";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaMailBulk } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import Meeting from "./Meeting";
+import Class from "./Class";
+import Lecture from "./Lecture";
+import AboutAfterLogin from "./AboutAfterLogin"
+import ContactAfterLogin from "./ContactAfterLogin"
+import HomeAfterLogin from "./HomeAfterLogin";
+import Favoritepage from "./Favorite";
+import Admin from "./Admin";
+import { Detail } from "./Context";
+import { useContext } from "react";
+import { useEffect } from "react";
+import Rooms from "./Rooms";
+import './Search.css'
 
 export default function Search() {
   const navigate = useNavigate();
   const { roomid, setroomid } = useContext(Detail);
   const [typecheck, settypechek] = useState();
-  const [favorite, setfavorite] = useState(false);
+  const {favorite,setfavorite} =useContext(Detail)
+
   const [fav, setfav] = useState([
     "not favorite",
     "not favorite",
@@ -57,7 +78,7 @@ export default function Search() {
   function Fun4() {
     const temp = [];
     for (let i = 0; rooms.length > i; i++) {
-      if (rooms[i].board === "yes") {
+      if (rooms[i].whiteboard === "yes") {
         console.log(rooms[i]);
         temp.push(rooms[i]);
       }
@@ -68,7 +89,7 @@ export default function Search() {
   function Fun5(x) {
     const temp = [];
     for (let i = 0; rooms.length > i; i++) {
-      if (rooms[i].type === x) {
+      if (rooms[i].type === x) { 
         console.log(rooms[i]);
         temp.push(rooms[i]);
       }
@@ -105,7 +126,6 @@ export default function Search() {
         setroomid(0);
         console.log("room1");
         navigate("/Lectureroom");
-
         break;
 
       case "room 2":
@@ -155,56 +175,90 @@ export default function Search() {
         break;
     }
   }
-
   let roomsingle = [];
   return (
     <div>
-      <h1>Our Rooms</h1>
-      <select name="roomtype" onChange={(e) => Fun5(e.target.value)}>
-        <option value="">select room type</option>
-        <option value="lectureHall">conferenceHall</option>
-        <option value="meetingroom">meetroom</option>
-        <option value="classroom">classes</option>
+        <div>
+        <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
+          <Tabs className="contactnav" centered>
+            <NavLink to="/HomeAfterLogin" element={<HomeAfterLogin />}>
+              {" "}
+              <Tab label="Home" />
+            </NavLink>
+            <NavLink to="/Rooms" element={<Rooms />}>
+              {" "}
+              <Tab label="our rooms" />
+            </NavLink>
+            <NavLink to="/Aboutafterlogin" element={<AboutAfterLogin />}>
+              {" "}
+              <Tab label="about" />
+            </NavLink>
+            <NavLink to="/Contactafterlogin" element={<ContactAfterLogin />}>
+              {" "}
+              <Tab label="contact" />
+            </NavLink>
+            <NavLink to="/Search" element={<Search />}>
+              {" "}
+              <Tab label="search" />
+            </NavLink>
+            <NavLink to="/Favoritepage" element={<Favoritepage />}>
+              {" "}
+              <Tab label="favorite" />
+            </NavLink>
+            {/* {user == "Admin" && ( */}
+              <NavLink to="/Admin" element={<Admin />}>
+                {" "}
+                <Tab label="Admin" />
+              </NavLink>
+            {/* )} */}
+          </Tabs>
+        </Box>
+        </div>
+      <h1>Our Facilities</h1>
+      <select name="roomtype" onChange={(e) => {Fun5(e.target.value)}}>
+        <option value="">Filter By Room Type</option>
+        <option value="Lecture Hall">Lecture Hall</option>
+        <option value="Meeting Room">Meeting Room</option>
+        <option value="Classroom">Classroom</option>
       </select>
       <input
         type="number"
-        placeholder="capacity"
+        placeholder="Capacity"
         onChange={(e) => Fun6(e.target.value)}
       />
-      board
-      <input type="checkbox" value={"board"} onChange={(e) => Fun4(e, "yes")} />
-      zoom
+      Whiteboard
+      <input type="checkbox" value={"whiteboard"} onChange={(e) => Fun4(e, "yes")} />
+      Zoom
       <input type="checkbox" value={"zoom"} onChange={(e) => Fun3(e, "yes")} />
-      air condition
+      Air Conditioning
       <input
         type="checkbox"
         value={"airconditioning"}
         onChange={(e) => Fun2(e, "yes")}
       />
-      projector
+      Projector
       <input
         type="checkbox"
         value={"projector"}
         onChange={(e) => Fun(e, "yes")}
       />
-      <button onClick={(e) => window.location.reload(false)}>reset</button>
-      <h2>rooms</h2>
+      <button onClick={(e) => window.location.reload(false)}>Reset</button>
       {rooms.map((single, index) => {
         roomsingle.push(single.name);
         return (
-          <div>
+          <div className="buyasearch">
             <p key={index}>
               <h4> name: {single.name}</h4>
               <br />
-              type: {single.type}
+              Room Type: {single.type}
               <br />
-              capicity:{single.capacity}
+              Capacity:{single.capacity}
               <br />
-              zoom: {single.zoom}
+              Zoom: {single.zoom}
               <br />
-              aircondition: {single.airconditioning} <br />
-              porjector: {single.projector} <br />
-              board: {single.board}
+              Air Conditioning: {single.airconditioning} <br />
+              Projector: {single.projector} <br />
+              Whiteboard: {single.whiteboard}
               <br />
               <br />
               <button
@@ -212,9 +266,8 @@ export default function Search() {
                   favChange(index, "favorite");
                   single.favorite == true
                     ? (single.favorite = false)
-                    : (single.favorite = true);
-                  console.log(single.favorite);
-                  console.log(rooms);
+                    : (single.favorite = true) && setfavorite([...favorite,{single}]) ;
+                    console.log(favorite);
                 }}
               >
                 {fav[index]}
@@ -222,9 +275,12 @@ export default function Search() {
               <button
                 onClick={(e) => {
                   navigatetospesific(roomsingle[index]);
+                  localStorage.setItem('favorite',JSON.stringify(favorite) );
+                  JSON.parse(favorite)
+                  console.log(favorite);
                 }}
               >
-                select room
+                Select Room
               </button>
             </p>
             <hr />
