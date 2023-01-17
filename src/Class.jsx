@@ -93,6 +93,7 @@ function Class() {
                             <li>Air Conditioning? {rooms[3].airconditioning}</li>
                             <li>Zoom? {rooms[3].zoom}</li>
                             <li>Whiteboard? {rooms[3].whiteboard}</li>
+                            <li>Projector? {rooms[3].projector}</li>
               </ul>          
           </div>
           <Ckre />

@@ -95,6 +95,7 @@ function Lecture3() {
                             <li>Air Conditioning? {rooms[2].airconditioning}</li>
                             <li>Zoom? {rooms[2].zoom}</li>
                             <li>Whiteboard? {rooms[2].whiteboard}</li>
+                            <li>Projector? {rooms[2].projector}</li>
                         </ul>
                     </div>
                     <Ckre />

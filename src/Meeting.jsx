@@ -96,6 +96,7 @@ function Meeting() {
                             <li>Air Conditioning? {rooms[6].airconditioning}</li>
                             <li>Zoom? {rooms[6].zoom}</li>
                             <li>Whiteboard? {rooms[6].whiteboard}</li>
+                            <li>Projector? {rooms[6].projector}</li>
                         </ul>
                     </div>
                     <Ckre />
